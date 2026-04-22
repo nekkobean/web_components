@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "storybook.storybook-vite",
+        "storybook.storybook-addon-themes",
+        "esbenp.prettier-vscode"
+    ]
+}
