@@ -37,6 +37,7 @@
     "eslint-plugin-storybook": "^10.3.5",
     "playwright": "^1.59.1",
     "storybook": "^10.3.5",
+    "storybook-dark-mode": "^5.0.0",
     "tailwindcss": "^4.2.4",
     "typescript": "^5",
     "vite": "^8.0.9",

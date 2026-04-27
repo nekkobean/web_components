@@ -1,17 +1,15 @@
-/// <reference path="../src/declaration.d.ts" />
-import type { Preview } from '@storybook/nextjs-vite'
-// .storybook/preview.js
-import {withThemeByDataAttribute} from '@storybook/addon-themes';
-import '../src/tailwind.css'; 
+import type { Preview } from "@storybook/nextjs-vite";
+import { withThemeByDataAttribute } from "@storybook/addon-themes";
+import "../src/themes/tailwind.css";
+// import { themes } from 'storybook/theming';
 
- 
 export const decorators = [
   withThemeByDataAttribute({
     themes: {
-      light: 'light',
-      dark: 'dark',
+      light: "light",
+      dark: "dark",
     },
-    defaultTheme: 'light',
+    defaultTheme: "light",
     attributeName: 'data-mode',
   }),
 ];
@@ -20,8 +18,8 @@ const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
@@ -29,8 +27,8 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: "todo",
+    },
   },
   decorators,
 };
