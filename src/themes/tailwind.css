@@ -1,11 +1,57 @@
 @import "tailwindcss";
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+@theme {
+  --color-*: initial;
+  --color-blue: #2058da;
+  --color-orange: #f97316;
+  --color-green: #16a34a;
+  --color-red: #dc2626;
+  --color-light-orange: #bb682c;
+  --color-light-blue: #5f7a98;
+  --color-light-green: #579b5f;
+  --color-light-red: #bc5050;
+  --color-white: #f0f2f6;
+  --color-black: #1b1b1b;
+  --color-light-black: #252b35;
+  --color-gray: #374151;
+  --color-light-gray: #b3b7bf;
 
-@layer base {
-    [data-mode="light"] {
-        @apply bg-white text-black;
-    }
-    [data-mode="dark"] {
-        @apply bg-gray-900 text-white;
-    }
+  --color-primary-button: #ffffff;
+  --color-secondary-button: #bbbab6;
+  --color-restore-button: #37b64b;
+  --color-delete-button: #ed1a1a;
+  --color-disabled-button: #bbbab6;
+
+  --color-primary: #121212;
+
+  /* --font-family: "Inter", sans-serif; */
+  
+  /* --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  /* --color-text: var(--color-text); */
+  /* [data-theme="dark"] {
+  --bg-1: black;
+  --text-1: white; */
 }
+@layer base {
+  [data-mode="light"] {
+    @apply bg-white text-black;
+    --color-primary-button: #2058da;
+    --color-secondary-button: #3d4755;
+    --color-restore-button: #16a34a;
+    --color-delete-button: #d23b38;
+    --color-disabled-button: #6f7989;
 
+    --color-primary: #ffffff;
+  }
+  [data-mode="dark"] {
+    @apply bg-light-black text-white;
+    --color-primary-button: rgb(82, 126, 196);
+    --color-secondary-button: #5e6a7a;
+    --color-restore-button: #569c6b;
+    --color-delete-button: #bb5858;
+    --color-disabled-button: #b9bec8;
+
+    --color-primary: #ffffff;
+  }
+}
