@@ -1,57 +1,47 @@
 @import "tailwindcss";
-/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 @theme {
   --color-*: initial;
-  --color-blue: #2058da;
-  --color-orange: #f97316;
-  --color-green: #16a34a;
-  --color-red: #dc2626;
-  --color-light-orange: #bb682c;
-  --color-light-blue: #5f7a98;
-  --color-light-green: #579b5f;
-  --color-light-red: #bc5050;
-  --color-white: #f0f2f6;
-  --color-black: #1b1b1b;
-  --color-light-black: #252b35;
-  --color-gray: #374151;
-  --color-light-gray: #b3b7bf;
+  --color-blue: oklch(0.4462 0.1768 263.73);
+  --color-green: oklch(0.3958 0.134172 142.6114);
+  --color-red: oklch(0.4594 0.1885 29.23);
+  --color-light-orange: oklch(0.792 0.1228 68.65);
+  --color-light-blue: oklch(0.7889 0.0903 269.59);
+  --color-light-green: oklch(0.757 0.193 143.64);
+  --color-light-red: oklch(0.7978 0.1161 19.96);
+  --color-white: oklch(0.9608 0.0058 264.53);
+  --color-black: oklch(0.2221 0 0);
+  --color-light-black: oklch(0.2876 0.0203 260.62);
+  --color-gray: oklch(0.4276 0 0);
+  --color-light-gray: oklch(0.7826 0 0);
 
-  --color-primary-button: #ffffff;
-  --color-secondary-button: #bbbab6;
-  --color-restore-button: #37b64b;
-  --color-delete-button: #ed1a1a;
-  --color-disabled-button: #bbbab6;
+  --color-primary-button: oklch(0.2876 0.0203 260.62);
+  --color-secondary-button: oklch(0.2876 0.0203 260.62);
+  --color-restore-button: oklch(0.2876 0.0203 260.62);
+  --color-delete-button: oklch(0.2876 0.0203 260.62);
+  --color-disabled-button: oklch(0.2876 0.0203 260.62);
 
-  --color-primary: #121212;
-
-  /* --font-family: "Inter", sans-serif; */
-  
-  /* --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-  /* --color-text: var(--color-text); */
-  /* [data-theme="dark"] {
-  --bg-1: black;
-  --text-1: white; */
+  --color-primary: oklch(0.2876 0.0203 260.62);
 }
 @layer base {
   [data-mode="light"] {
     @apply bg-white text-black;
-    --color-primary-button: #2058da;
-    --color-secondary-button: #3d4755;
-    --color-restore-button: #16a34a;
-    --color-delete-button: #d23b38;
-    --color-disabled-button: #6f7989;
+    --color-primary-button: oklch(0.4462 0.1768 263.73);
+    --color-secondary-button: oklch(0.3946 0.0271 256.81);
+    --color-restore-button: oklch(0.3958 0.134172 142.6114);
+    --color-delete-button: oklch(0.4594 0.1885 29.23);
+    --color-disabled-button: oklch(0.4276 0 0);
 
-    --color-primary: #ffffff;
+    --color-primary: oklch(1 0 0);
   }
   [data-mode="dark"] {
     @apply bg-light-black text-white;
-    --color-primary-button: rgb(82, 126, 196);
-    --color-secondary-button: #5e6a7a;
-    --color-restore-button: #569c6b;
-    --color-delete-button: #bb5858;
-    --color-disabled-button: #b9bec8;
+    --color-primary-button: oklch(0.7769 0.0911 250.52);
+    --color-secondary-button: oklch(0.8188 0.0167 206.42);
+    --color-restore-button: oklch(0.757 0.193 143.64);
+    --color-delete-button: oklch(0.7978 0.1161 19.96);
+    --color-disabled-button: oklch(0.7826 0 0);
 
-    --color-primary: #ffffff;
+    --color-primary: oklch(0.2221 0 0);
   }
 }
