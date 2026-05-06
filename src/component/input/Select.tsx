@@ -1,9 +1,10 @@
 interface SelectProps {
   label: string;
-  options: { value: string; label: string }[];
+  options: { value: string; label: string; image?: string }[];
   required?: boolean;
   disabled?: boolean;
   helperText?: string;
+  error?: string;
   onChange?: (value: string) => void;
 }
 
@@ -13,6 +14,7 @@ export const Select: React.FC<SelectProps> = ({
   required,
   disabled,
   helperText,
+  error,
   onChange,
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
