@@ -20,7 +20,6 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
   helperText, 
 }) => {
   const [isChecked, setIsChecked] = useState(defaultChecked || false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     setIsChecked(checked);
@@ -50,15 +49,12 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
             ${disabled ? "text-fg-disabled" : "text-heading"}
           `}
         >
-          {label} {required && <span className="text-red-500">*</span>}
+          {label} {required && <span className="text-red">*</span>}
         </label>
       </div>
-
-      {error && <p className="text-red-500 text-xs">{error}</p>}
-
-      {helperText && !error && (
-        <p className="text-gray-500 text-xs">{helperText}</p>
-      )}
+      <div className={error ? "text-red text-xs" : "text-gray-500 text-xs"}>
+        {helperText}
+      </div>
     </div>
   );
 };
