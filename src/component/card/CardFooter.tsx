@@ -1,5 +1,5 @@
 interface CardFooterProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const CardFooter: React.FC<CardFooterProps> = ({ children }) => {
