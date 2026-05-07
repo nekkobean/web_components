@@ -4,11 +4,14 @@ const meta = {
     title: 'Components/Select',
     component: Select,
     args: {
-        label: 'Choose an option',
+        label: 'Country',
+        error: false,
+        helperText: 'Please select one of the options.',
         options: [
-            { value: 'option1', label: 'Option 1' },
-            { value: 'option2', label: 'Option 2' },
-            { value: 'option3', label: 'Option 3' }
+            {value: '', label: 'Select a Country'},
+            { value: 'option1', label: 'Germany' },
+            { value: 'option2', label: 'China' },
+            { value: 'option3', label: 'Iran' }
         ]
     }
 } satisfies Meta<typeof Select>;
@@ -26,5 +29,11 @@ export const Required: Story = {
 export const Disabled: Story = {
     args: {
         disabled: true
+    },
+};
+export const WithSelectedOption: Story = {
+    args: {
+        disabled: true,
+        value: 'option3'
     },
 };
