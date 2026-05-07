@@ -9,9 +9,9 @@ interface TextFieldProps {
   type: "text" | "email" | "password" | "number";
 }
 
-const errorColor = "border-red-500";
-const errorTextColor = "text-red-500";
-const defaultColor = "border-gray-300";
+const errorColor = "border-red";
+const errorTextColor = "text-red";
+const defaultColor = "border-gray";
 export const TextField: React.FC<TextFieldProps> = ({
   id,
   labelText,
