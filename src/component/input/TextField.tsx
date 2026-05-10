@@ -22,17 +22,19 @@ export const TextField: React.FC<TextFieldProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-gray">
         {labelText}
       </label>
       <input
         id={id}
         placeholder={placeholder}
         type={type}
-        className={`border ${error ? errorColor : defaultColor} rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500`}
+       className={`block w-full px-3 py-2.5 bg-neutral-secondary-medium border ${
+  error ? errorColor : defaultColor
+} text-heading text-sm rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`}
       />
       {helperText && (
-        <p className={`${error ? errorTextColor : "text-gray-500"} text-xs`}>
+        <p className={`${error ? errorTextColor : "text-light-gray"} text-xs`}>
           {helperText}
         </p>
       )}

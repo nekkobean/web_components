@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import  { Select }  from './Select'; 
 const meta = {
-    title: 'Components/Select',
     component: Select,
     args: {
         label: 'Country',

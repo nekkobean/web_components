@@ -46,13 +46,13 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
           htmlFor={id}
           className={`
             select-none ms-2 text-sm font-medium
-            ${disabled ? "text-fg-disabled" : "text-heading"}
+            ${disabled ? "text-fg-disabled text-light-gray" : "text-heading"}
           `}
         >
           {label} {required && <span className="text-red">*</span>}
         </label>
       </div>
-      <div className={error ? "text-red text-xs" : "text-gray-500 text-xs"}>
+      <div className={error ? "text-red text-xs" : "text-gray text-xs"}>
         {helperText}
       </div>
     </div>
