@@ -27,11 +27,13 @@ export const Select: React.FC<SelectProps> = ({
 
   return (
     <div className="max-w-sm mx-auto">
-      <label>
+      <label className="text-sm font-medium text-gray">
         {label} {required && "*"}
       </label>
       <select
-        className="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        className="h-10 border-r-8 border-transparent px-4 outline outline-neutral-700 block w-full p-2 bg-neutral-secondary-medium
+         border border-default-medium text-heading text-sm font-normal rounded-base focus:ring-brand focus:border-brand shadow-xs 
+         placeholder:text-body hover:cursor-pointer"
         disabled={disabled}
         onChange={handleChange}
         value={value}
@@ -43,7 +45,7 @@ export const Select: React.FC<SelectProps> = ({
         ))}
       </select>
       {helperText && error && (
-        <div className="text-red text-xs">
+        <div className="text-red text-sm font-normal">
           {helperText}
         </div>
       )}

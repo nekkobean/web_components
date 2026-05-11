@@ -27,7 +27,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
 
   return (
     <div className="flex flex-col gap-1">
-      <div className="flex items-center">
+      <div className="flex items-center gap-2">
         <input
           id={id}
           type="checkbox"
@@ -38,7 +38,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
             w-4 h-4 border rounded-xs
             bg-neutral-secondary-medium
             focus:ring-2 focus:ring-brand-soft
-            ${disabled ? "border-light cursor-not-allowed" : "border-default-medium"}
+            ${disabled ? "border-light cursor-not-allowed" : "border-default-medium hover:cursor-pointer"}
           `}
         />
 
@@ -52,7 +52,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
           {label} {required && <span className="text-red">*</span>}
         </label>
       </div>
-      <div className={error ? "text-red text-xs" : "text-gray text-xs"}>
+      <div className={error ? "text-red text-sm font-medium" : "text-gray text-sm font-medium"}>
         {helperText}
       </div>
     </div>
