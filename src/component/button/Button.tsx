@@ -27,17 +27,19 @@ export const Button: React.FC<ButtonProps> = ({
   isLoading = false,
 }) => {
   const colors = {
-    primary: "bg-blue-600 text-white",
-    secondary: "bg-gray-200 text-black border-solid border-gray-400",
-    restore: "bg-green-600 text-white",
-    delete: "bg-red-600 text-white",
-    disabled: "bg-gray-400 text-gray-600",
+    primary: "bg-primary-button text-primary",
+    secondary: "bg-secondary-button text-primary",
+    restore: "bg-restore-button text-primary",
+    delete: "bg-delete-button text-primary",
+    disabled: "bg-disabled-button text-primary",
   };
   const loader = isLoading ? <Loader /> : null;
 
   return (
     <button
-      className={colors[variant] + " px-4 py-2 rounded-2xl"}
+      className={
+        colors[variant] + " flex items-center gap-3 px-4 py-2 rounded-2xl"
+      }
       disabled={isLoading}
     >
       {loader}

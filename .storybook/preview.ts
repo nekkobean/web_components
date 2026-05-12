@@ -1,7 +1,6 @@
 import type { Preview } from "@storybook/nextjs-vite";
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import "../src/themes/tailwind.css";
-// import { themes } from 'storybook/theming';
 
 export const decorators = [
   withThemeByDataAttribute({
@@ -10,7 +9,7 @@ export const decorators = [
       dark: "dark",
     },
     defaultTheme: "light",
-    attributeName: 'data-mode',
+    attributeName: "data-mode",
   }),
 ];
 
