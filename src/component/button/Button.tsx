@@ -19,12 +19,14 @@ interface ButtonProps {
    * @default false
    */
   isLoading?: boolean;
+  disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   label,
   isLoading = false,
+  disabled = false,
 }) => {
   const colors = {
     primary: "bg-primary-button text-primary",
@@ -34,13 +36,16 @@ export const Button: React.FC<ButtonProps> = ({
     disabled: "bg-disabled-button text-primary",
   };
   const loader = isLoading ? <Loader /> : null;
+ const isDisabled = disabled || isLoading;
 
   return (
     <button
-      className={
-        colors[variant] + " flex items-center gap-3 px-4 py-2 rounded-2xl"
-      }
-      disabled={isLoading}
+      className={`${
+        colors[variant]
+      } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium ${
+        isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
+      }`}
+      disabled={isDisabled}
     >
       {loader}
       {label}
