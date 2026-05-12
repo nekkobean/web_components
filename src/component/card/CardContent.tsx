@@ -10,7 +10,7 @@ export const CardContent: React.FC<CardContentProps> = ({
   return (
     <div className="p-10">
       <h2 className="text-lg font-bold mb-2 text-black">{title}</h2>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray text-sm font-normal">{description}</p>
     </div>
   );
 };
