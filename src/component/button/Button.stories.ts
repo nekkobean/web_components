@@ -10,7 +10,7 @@ const meta = {
     variant: {
       control: "select",
       options: ["primary", "secondary", "restore", "delete", "disabled"],
-      disable: false,
+      disabled: false,
     },
   },
 } satisfies Meta<typeof Button>;
