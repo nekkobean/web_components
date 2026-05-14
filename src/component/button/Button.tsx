@@ -39,6 +39,7 @@ export const Button: React.FC<ButtonProps> = ({
  const isDisabled = disabled || isLoading;
 
   return (
+    <div>
     <button
       className={`${
         colors[variant]
@@ -51,5 +52,6 @@ export const Button: React.FC<ButtonProps> = ({
       {loader}
       {label}
     </button>
+    </div>
   );
 };

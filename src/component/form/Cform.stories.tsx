@@ -30,10 +30,10 @@ export const DefaultForm: Story = {
         <TextField labelText="Name" id="name" type="text" placeholder="Enter your name" />
         <TextField labelText="Email" id="email" placeholder="Enter your email" type="email" />
       <Select label="Country" options={[
-       {value: '', label: 'Select a Country'},
-            { value: 'option1', label: 'Germany' },
-            { value: 'option2', label: 'China' },
-            { value: 'option3', label: 'Iran' }
+            { key: '0', name: '', value: 'Select a Country'},
+            { key: '1', name: 'option1', value: 'Germany' },
+            { key: '2', name: 'option2', value: 'China' },
+            { key: '3', name: 'option3', value: 'Iran' }
       ]} />
       <CheckBox id="terms" label="Accept Terms & Conditions" helperText="You must accept the terms and conditions to proceed." />
       <div className="flex justify-end gap-2 mt-2">
