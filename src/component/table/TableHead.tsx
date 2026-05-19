@@ -4,31 +4,28 @@ import { alignment } from "./alignment";
 
 interface TableHeadProps {
   rowData: TableHeadCell[];
-  style?: string;
 }
 
-export const TableHead: React.FC<TableHeadProps> = ({
-  rowData,
-  style,
-}) => {
+export const TableHead: React.FC<TableHeadProps> = ({ rowData }) => {
   return (
     <thead>
       <tr
-        className={`
-          border-b
-          border-gray-200
-          bg-gray-50
-          ${style || ""}
-        `}
+        className="
+          sticky
+          top-0
+          z-10
+          bg-white
+        "
       >
         {rowData.map((cell) => (
           <th
             key={cell.key}
             className={`
-              px-4
-              py-3
-              text-sm
-              font-medium
+              px-3 sm:px-4 md:px-6
+              py-2 md:py-4
+              text-xs sm:text-sm
+              text-gray
+              font-semibold
               ${alignment[cell.align || "left"]}
               ${cell.style || ""}
             `}

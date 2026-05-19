@@ -11,10 +11,12 @@ export const TableRow: React.FC<TableRowProps> = ({ rowData, style }) => {
   return (
     <tr
       className={`
-        border-b
-        border-gray-200
-        last:border-b-0
+
+        transition-colors
         hover:bg-gray-50
+          [&:last-child_td]:border-b-0
+
+       
         ${style || ""}
       `}
     >
@@ -22,9 +24,17 @@ export const TableRow: React.FC<TableRowProps> = ({ rowData, style }) => {
         <td
           key={cell.key}
           className={`
-            px-4
-            py-3
-            text-sm
+            px-3 sm:px-4 md:px-6
+            py-2 md:py-4
+            text-xs sm:text-sm
+            text-gray-800
+            whitespace-nowrap
+
+            border-b
+            border-light-gray
+          
+        
+            
             ${alignment[cell.align || "left"]}
             ${cell.style || ""}
           `}

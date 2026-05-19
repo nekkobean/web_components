@@ -14,8 +14,8 @@ export const TableCell: React.FC<TableCellProps> = ({
   return (
     <td
       className={`
-        px-4 py-3
-        border-b
+        px-4 
+        py-3
         text-sm
         ${align === "center" ? "text-center" : ""}
         ${align === "right" ? "text-right" : ""}

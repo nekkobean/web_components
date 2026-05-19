@@ -7,12 +7,21 @@ import { TableRow } from "./TableRow";
 
 const meta = {
   component: Ctable,
+
+  subcomponents: {
+    TableHead,
+    TableBody,
+    TableRow,
+  },
+
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta<typeof Ctable>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
 const headers = [
   { key: 1, name: "name", value: "Name" },
   { key: 2, name: "role", value: "Role" },
@@ -31,20 +40,24 @@ const rows = [
 
 export const Default: Story = {
   render: () => (
-    <Ctable style="rounded-none">
-      <TableHead rowData={headers} />
+    <div className="min-h-screen bg-gray-100 p-10">
+      <div className="max-w-6xl mx-auto">
+        <Ctable maxRows={5}>
+          <TableHead rowData={headers} />
 
-      <TableBody>
-        {rows.map((row, i) => (
-          <TableRow
-            key={i}
-            rowData={headers.map((h) => ({
-              key: h.key,
-              value: row[h.name as keyof typeof row],
-            }))}
-          />
-        ))}
-      </TableBody>
-    </Ctable>
+          <TableBody>
+            {rows.map((row, i) => (
+              <TableRow
+                key={i}
+                rowData={headers.map((h) => ({
+                  key: h.key,
+                  value: row[h.name as keyof typeof row],
+                }))}
+              />
+            ))}
+          </TableBody>
+        </Ctable>
+      </div>
+    </div>
   ),
 };
