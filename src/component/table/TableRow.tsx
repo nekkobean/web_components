@@ -27,7 +27,7 @@ export const TableRow: React.FC<TableRowProps> = ({ rowData, style }) => {
             px-3 sm:px-4 md:px-6
             py-2 md:py-4
             text-xs sm:text-sm
-            text-gray-800
+            text-gray
             whitespace-nowrap
 
             border-b

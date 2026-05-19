@@ -26,6 +26,9 @@ export const TableHead: React.FC<TableHeadProps> = ({ rowData }) => {
               text-xs sm:text-sm
               text-gray
               font-semibold
+
+              border-b
+              border-light-gray
               ${alignment[cell.align || "left"]}
               ${cell.style || ""}
             `}

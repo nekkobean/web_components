@@ -18,7 +18,7 @@ export const Ctable: React.FC<CtableProps> = ({
         overflow-hidden
         rounded-md
         bg-white
-       shadow-[0px_2px_6px_rgba(0,0,0,0.08),0px_8px_24px_rgba(0,0,0,0.06)]
+       shadow-lg
         ${style || ""}
       `}
     >

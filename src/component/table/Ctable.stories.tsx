@@ -40,7 +40,7 @@ const rows = [
 
 export const Default: Story = {
   render: () => (
-    <div className="min-h-screen bg-gray-100 p-10">
+    <div className="min-h-screen bg-light-gray p-10">
       <div className="max-w-6xl mx-auto">
         <Ctable maxRows={5}>
           <TableHead rowData={headers} />
