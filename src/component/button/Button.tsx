@@ -20,6 +20,7 @@ interface ButtonProps {
    */
   isLoading?: boolean;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -27,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   isLoading = false,
   disabled = false,
+  onClick,
 }) => {
   const colors = {
     primary: "bg-primary-button text-primary",
@@ -46,6 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
         isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
       }`}
       disabled={isDisabled}
+      onClick={onClick}
     >
       {loader}
       {label}
