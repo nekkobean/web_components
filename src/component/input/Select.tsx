@@ -1,6 +1,6 @@
 interface SelectProps {
   label: string;
-  options: { value: string; label: string; image?: string }[];
+  options: { key: number; name: string; value: string; image?: string }[];
   required?: boolean;
   disabled?: boolean;
   helperText?: string;
@@ -26,7 +26,7 @@ export const Select: React.FC<SelectProps> = ({
   };
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="w-full flex flex-col gap-1">
       <label className="text-sm font-medium text-gray">
         {label} {required && "*"}
       </label>
@@ -40,8 +40,8 @@ export const Select: React.FC<SelectProps> = ({
         value={value}
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+          <option key={option.key} value={option.name}>
+            {option.value}
           </option>
         ))}
       </select>
