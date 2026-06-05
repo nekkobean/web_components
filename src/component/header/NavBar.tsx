@@ -12,6 +12,7 @@ interface NavBarProps {
   onItemClick?: (label: string) => void;
 }
 
+
 export const NavBar: React.FC<NavBarProps> = ({
   navBar = [],
   style,

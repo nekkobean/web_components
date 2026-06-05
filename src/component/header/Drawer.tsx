@@ -4,9 +4,10 @@ import { useState } from "react";
 interface DrawerProps {
   navDrawer: { id: number; href: string; label: string }[];
   style?: string;
+  onItemClick?: (label: string) => void;
 }
 
-export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style }) => {
+export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemClick }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -104,7 +105,20 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style }) => {
         </div>
 
         <div className="flex flex-col p-4">{navDrawer.map((item) => (
-            <a key={item.id} href={item.href || "#"} className="rounded-md px-4 py-3 hover:bg-gray-100">
+            <a
+              key={item.id}
+              href={item.href || "#"}
+              onClick={() => {
+                onItemClick?.(item.label);
+                setOpenDrawer(false);
+              }}
+              className="
+                rounded-md
+                px-4
+                py-3
+                hover:bg-gray-100
+              "
+            >
               {item.label}
             </a>
           ))}
