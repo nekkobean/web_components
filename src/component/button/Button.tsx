@@ -41,10 +41,12 @@ export const Button: React.FC<ButtonProps> = ({
  const isDisabled = disabled || isLoading;
 
   return (
+    <div>
     <button
       className={`${
         colors[variant]
-      } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium ${
+      } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
+       ${
         isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
       }`}
       disabled={isDisabled}
@@ -53,5 +55,6 @@ export const Button: React.FC<ButtonProps> = ({
       {loader}
       {label}
     </button>
+    </div>
   );
 };

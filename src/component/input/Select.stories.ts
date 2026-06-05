@@ -7,10 +7,10 @@ const meta = {
         error: false,
         helperText: 'Please select one of the options.',
         options: [
-            {value: '', label: 'Select a Country'},
-            { value: 'option1', label: 'Germany' },
-            { value: 'option2', label: 'China' },
-            { value: 'option3', label: 'Iran' }
+            { key: 0, name: '', value: 'Select a Country'},
+            { key: 1, name: 'option1', value: 'Germany' },
+            { key: 2, name: 'option2', value: 'China' },
+            { key: 3, name: 'option3', value: 'Iran' }
         ]
     }
 } satisfies Meta<typeof Select>;
@@ -22,7 +22,7 @@ export const Default: Story = {};
 export const Required: Story = {
     args: {
         required: true, 
-        helperText: "\n"
+        helperText: "please select one of the options"
     },
 };  
 export const Disabled: Story = {

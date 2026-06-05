@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { TextField } from "./TextField";
 const meta = {
-  // 👇 The component you're working on
   component: TextField,
     argTypes: {
     type: {
@@ -14,7 +13,7 @@ const meta = {
 } satisfies Meta<typeof TextField>;
 
 export default meta;
-// 👇 Type helper to reduce boilerplate
+
 type Story = StoryObj<typeof meta>; 
 
 export const Email: Story = {

@@ -3,5 +3,5 @@ interface CardFooterProps {
 }
 
 export const CardFooter: React.FC<CardFooterProps> = ({ children }) => {
-  return <div className="p-4 border-t-0">{children}</div>;
+  return <div className="flex justify-end gap-4 w-full p-4">{children}</div>;
 };
