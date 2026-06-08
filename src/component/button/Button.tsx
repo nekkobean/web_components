@@ -1,7 +1,7 @@
 import { Loader } from "../spinner/Loader";
 
 //parameters
-interface ButtonProps {
+export interface ButtonProps {
   /* The variant prop determines the styling of the button. It can be one of the following values:
    * - "primary": A blue button with white text, used for primary actions.
    * - "secondary": A gray button with black text and a border, used for secondary actions.
@@ -38,23 +38,23 @@ export const Button: React.FC<ButtonProps> = ({
     disabled: "bg-disabled-button text-primary",
   };
   const loader = isLoading ? <Loader /> : null;
- const isDisabled = disabled || isLoading;
+  const isDisabled = disabled || isLoading;
 
   return (
     <div>
-    <button
-      className={`${
-        colors[variant]
-      } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
+      <button
+        className={`${
+          colors[variant]
+        } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
        ${
-        isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
-      }`}
-      disabled={isDisabled}
-      onClick={onClick}
-    >
-      {loader}
-      {label}
-    </button>
+         isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
+       }`}
+        disabled={isDisabled}
+        onClick={onClick}
+      >
+        {loader}
+        {label}
+      </button>
     </div>
   );
 };

@@ -32,6 +32,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts", 
     "**/*.d.ts"
-],
+, "src/index.js"],
   "exclude": ["node_modules"]
 }
