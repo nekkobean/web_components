@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface FooterIconProps {
+export interface FooterIconProps {
   children?: ReactNode;
   description: string;
 }

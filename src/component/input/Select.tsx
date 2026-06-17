@@ -1,4 +1,7 @@
-interface SelectProps {
+import React from "react";
+import "web_components/src/themes/tailwind.css";
+
+export interface SelectProps {
   label: string;
   options: { key: number; name: string; value: string; image?: string }[];
   required?: boolean;
@@ -19,25 +22,19 @@ export const Select: React.FC<SelectProps> = ({
   value,
   onChange,
 }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    if (onChange) {
-      onChange(event.target.value);
-    }
-  };
-
   return (
     <div className="w-full flex flex-col gap-1">
       <label className="text-sm font-medium text-gray">
         {label} {required && "*"}
       </label>
+
       <select
-        className={`h-10 border-r-8 border-transparent px-4 outline outline-neutral-700 block w-full p-2 bg-neutral-secondary-medium
-         border border-default-medium text-heading text-sm font-normal rounded-base focus:ring-brand focus:border-brand shadow-xs 
-         placeholder:text-body
-         ${disabled ? "cursor-not-allowed" : "hover:cursor-pointer"}`}
+        className={`h-10 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs focus:ring-brand focus:border-brand ${
+          disabled ? "cursor-not-allowed" : "hover:cursor-pointer"
+        }`}
         disabled={disabled}
-        onChange={handleChange}
         value={value}
+        onChange={(e) => onChange?.(e.target.value)}
       >
         {options.map((option) => (
           <option key={option.key} value={option.name}>
@@ -45,10 +42,9 @@ export const Select: React.FC<SelectProps> = ({
           </option>
         ))}
       </select>
+
       {helperText && error && (
-        <div className="text-red text-sm font-normal">
-          {helperText}
-        </div>
+        <div className="text-red text-sm font-normal">{helperText}</div>
       )}
     </div>
   );

@@ -1,4 +1,5 @@
-interface CardFooterProps {
+import "web_components/src/themes/tailwind.css";
+export interface CardFooterProps {
   children?: React.ReactNode;
 }
 

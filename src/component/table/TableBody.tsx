@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface TableBodyProps {
+export interface TableBodyProps {
   children?: React.ReactNode;
   style?: string;
 }

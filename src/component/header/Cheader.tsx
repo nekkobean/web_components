@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CheaderProps {
+export interface CheaderProps {
     children?: React.ReactNode;
     style?: string;
 }

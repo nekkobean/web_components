@@ -1,4 +1,5 @@
-interface CardContentProps {
+import "web_components/src/themes/tailwind.css";
+export interface CardContentProps {
   title: string;
   description: string;
 }

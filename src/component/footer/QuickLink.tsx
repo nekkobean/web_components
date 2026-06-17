@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface QuickLinkProps {
+export interface QuickLinkProps {
   title: string;
   links: { id: number; label: string; href: string }[];
   onItemClick?: (label: string) => void;

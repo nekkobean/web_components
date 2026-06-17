@@ -10,12 +10,13 @@ import { FooterIcon } from "../footer/FooterIcon";
 import { QuickLink } from "../footer/QuickLink";
 import { FooterContact } from "../footer/FooterContact";
 import { FooterBottom } from "../footer/FooterBottom";
+import "web_components/src/themes/tailwind.css";
 
-interface LayoutProps {
+export interface LandingLayoutProps {
   children: React.ReactNode;
 }
 
-export const LandingLayout: React.FC<LayoutProps> = ({
+export const LandingLayout: React.FC<LandingLayoutProps> = ({
   children,
 }) => {
   const [currentPage, setCurrentPage] =

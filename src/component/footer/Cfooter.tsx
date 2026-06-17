@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CfooterProps {
+export interface CfooterProps {
   children?: ReactNode;
 }
 

@@ -1,4 +1,7 @@
-interface ModalProps {
+import React from "react";
+import "web_components/src/themes/tailwind.css";
+
+export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;

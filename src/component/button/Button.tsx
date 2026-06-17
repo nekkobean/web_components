@@ -1,4 +1,5 @@
 import { Loader } from "../spinner/Loader";
+import "web_components/src/themes/tailwind.css";
 
 //parameters
 export interface ButtonProps {

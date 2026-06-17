@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface DrawerProps {
+export interface DrawerProps {
   navDrawer: { id: number; href: string; label: string }[];
   style?: string;
   onItemClick?: (label: string) => void;

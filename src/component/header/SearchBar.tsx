@@ -1,10 +1,10 @@
-
+import "web_components/src/themes/tailwind.css";
 
 import React, { useState } from "react";
 
 import { Modal } from "../modal/Modal";
 
-interface SearchBarProps {
+export interface SearchBarProps {
   placeholder?: string;
   style?: string;
   children?: React.ReactNode;

@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface SectionProps {
+export interface SectionProps {
   id?: string;
   title?: string;
   children?: React.ReactNode;

@@ -1,8 +1,9 @@
 import React from "react";
 import { TableHeadCell } from "./types";
 import { alignment } from "./alignment";
+import "web_components/src/themes/tailwind.css";
 
-interface TableHeadProps {
+export interface TableHeadProps {
   rowData: TableHeadCell[];
 }
 

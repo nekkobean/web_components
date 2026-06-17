@@ -1,7 +1,8 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface NavBarProps {
-  navBar: {
+export interface NavBarProps {
+    navBar: {
     id: number;
     href: string;
     label: string;

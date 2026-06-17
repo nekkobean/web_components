@@ -1,4 +1,6 @@
-interface FooterContactProps {
+import "web_components/src/themes/tailwind.css";
+
+export interface FooterContactProps {
   email: string;
   phone: string;
 

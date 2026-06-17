@@ -1,3 +1,6 @@
+
+import "./themes/tailwind.css";
+
 export { Button } from './component/button';
 export { Card } from './component/card';
 export { Cfooter } from './component/footer';

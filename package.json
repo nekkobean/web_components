@@ -1,28 +1,19 @@
- {
-  "name": "@eloisallena/web_components",
-  "version": "1.0.1",
-  "private": false,
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+{
+  "name": "web_components",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "vite-build": "vite build",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
-    "postcss": "^8.5.10"
-  },
-  "peerDependencies": {
-    "next": "^16.2.4",
+    "next": "16.2.4",
+    "postcss": "^8.5.10",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -50,7 +41,6 @@
     "tailwindcss": "^4.2.4",
     "typescript": "^5",
     "vite": "^8.0.9",
-    "vite-plugin-dts": "^5.0.2",
     "vitest": "^4.1.4"
   }
 }

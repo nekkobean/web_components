@@ -1,9 +1,7 @@
-
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-import Image from "next/image";
-
-interface IconProps {
+export interface IconProps {
   logo?: string;
   title?: string;
   style?: string;
@@ -17,43 +15,27 @@ export const Icon: React.FC<IconProps> = ({
   alt = "",
 }) => {
   return (
-    <div
-      className={`
-        flex
-        items-center
-
-        gap-2
-        sm:gap-3
-
-        shrink-0
-
-        ${style || ""}
-      `}
-    >
-      <Image
+    <div className={`
+    flex 
+    items-center 
+    gap-2 
+    sm:gap-3 
+    shrink-0 
+    ${style || ""}
+    `
+    }>
+      <img
         src={logo}
         alt={alt}
-        width={40}
-        height={40}
         className="
-          h-8
-          w-8
-
-          sm:h-10
-          sm:w-10
-
-          object-contain
-        "
+        h-8
+        w-8
+        sm:h-10
+        sm:w-10
+        object-contain"
       />
-      <h1
-        className="
-          text-sm
-          sm:text-lg
 
-          font-bold
-          text-blue
-        "
-      >
+      <h1 className="text-sm sm:text-lg font-bold text-blue">
         {title}
       </h1>
     </div>
