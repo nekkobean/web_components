@@ -1,6 +1,7 @@
-import Image from "next/image";
+import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CardImageProps {
+export interface CardImageProps {
   alt: string;
   image: string;
   children?: React.ReactNode;
@@ -13,12 +14,10 @@ export const CardImage: React.FC<CardImageProps> = ({
 }) => {
   return (
     <div className="relative w-full h-48">
-      <Image
+      <img
         src={image}
         alt={alt}
-        width={300}
-        height={192}
-        className="w-full h-auto object-cover"
+        className="w-full h-full object-cover"
       />
       {children}
     </div>

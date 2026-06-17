@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface TableCellProps {
+export interface TableCellProps {
   children: React.ReactNode;
   align?: string;
   style?: string;

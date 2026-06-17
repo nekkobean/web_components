@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CtableProps {
+export interface CtableProps {
   children?: React.ReactNode;
   style?: string;
   maxRows?: number;

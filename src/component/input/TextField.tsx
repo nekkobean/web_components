@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface TextFieldProps {
+export interface TextFieldProps {
   id: string;
   labelText: string;
   placeholder: string;

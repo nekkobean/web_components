@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CheckBoxProps {
+export interface CheckBoxProps {
   id: string;
   label: string;
   required?: boolean;
@@ -8,6 +9,7 @@ interface CheckBoxProps {
   defaultChecked?: boolean;
   error?: boolean;
   helperText?: string;
+  onChange?: (checked: boolean) => void;
 }
 
 export const CheckBox: React.FC<CheckBoxProps> = ({
@@ -17,12 +19,15 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
   disabled,
   defaultChecked,
   error,
-  helperText, 
+  helperText,
+  onChange,
 }) => {
   const [isChecked, setIsChecked] = useState(defaultChecked || false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     setIsChecked(checked);
+    onChange?.(checked);
   };
 
   return (
@@ -34,30 +39,32 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
           checked={isChecked}
           onChange={handleChange}
           disabled={disabled}
-          className={`
-            w-4 h-4 border rounded-xs
-            bg-neutral-secondary-medium
-            focus:ring-2 focus:ring-brand-soft
-            ${disabled ? "border-light cursor-not-allowed" : "border-default-medium hover:cursor-pointer"}
-          `}
+          className={`w-4 h-4 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${
+            disabled
+              ? "border-light cursor-not-allowed"
+              : "border-default-medium hover:cursor-pointer"
+          }`}
         />
 
         <label
           htmlFor={id}
-          className={`
-            select-none ms-2 text-sm font-medium
-            ${disabled ? "text-fg-disabled text-light-gray" : "text-heading"}
-          `}
+          className={`select-none ms-2 text-sm font-medium ${
+            disabled ? "text-light-gray" : "text-heading"
+          }`}
         >
           {label} {required && <span className="text-red">*</span>}
         </label>
       </div>
-      <div className={error ? "text-red text-sm font-medium" : "text-gray text-sm font-medium"}>
-        {helperText}
-      </div>
+
+      {helperText && (
+        <div
+          className={`text-sm font-medium ${
+            error ? "text-red" : "text-gray"
+          }`}
+        >
+          {helperText}
+        </div>
+      )}
     </div>
   );
 };
-
-
-

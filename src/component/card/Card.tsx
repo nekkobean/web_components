@@ -1,6 +1,7 @@
 import React from "react";
+import "web_components/src/themes/tailwind.css";
 
-interface CardProps {
+export interface CardProps {
   children?: React.ReactNode;
 }
 

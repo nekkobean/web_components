@@ -1,0 +1,29 @@
+
+import "./themes/tailwind.css";
+
+export { Button } from './component/button';
+export { Card } from './component/card';
+export { Cfooter } from './component/footer';
+export { FooterIcon } from './component/footer';
+export { FooterBottom } from './component/footer';
+export { FooterContact } from './component/footer';
+export { QuickLink } from './component/footer';
+export { Cform } from './component/form';
+export { Cheader } from './component/header';
+export { Icon } from './component/header';
+export { Drawer } from './component/header';
+export { SearchBar } from './component/header';
+export { NavBar } from './component/header';
+export { Modal } from './component/modal';
+export { TextField } from "./component/input";
+export { CheckBox } from "./component/input";
+export { Select } from "./component/input";
+export { Section } from './component/section';
+export { Loader } from './component/spinner';
+export { LandingLayout } from './component/stories';
+export { Ctable } from './component/table';
+export { TableBody } from './component/table';
+export { TableCell } from './component/table';
+export { TableHead } from './component/table';
+export { TableRow } from './component/table';
+export { Breadcrumbs } from './component/breadcrumbs';
