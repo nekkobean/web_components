@@ -1,5 +1,5 @@
 import React from "react";
-import "web_components/src/themes/tailwind.css";
+// import "web_components/src/themes/tailwind.css";
 
 export interface CformProps extends React.FormHTMLAttributes<HTMLFormElement> {
   children?: React.ReactNode;

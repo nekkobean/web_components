@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import "web_components/src/themes/tailwind.css";
+import type { NavItem, NavigationProps } from "./types";
+// import "web_components/src/themes/tailwind.css";
 
-export interface DrawerProps {
-  navDrawer: { id: number; href: string; label: string }[];
-  style?: string;
-  onItemClick?: (label: string) => void;
+export interface DrawerProps extends NavigationProps {
+  navDrawer: NavItem[];
 }
 
 export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemClick }) => {

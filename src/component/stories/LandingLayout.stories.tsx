@@ -26,9 +26,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const FullPage: Story = {
-  args: {
+  args: { 
+    logo: "icon.svg",
+    companyTitle: "QTEK",
+    description: "A brief description of the company.",
+    email: "hello@qtek.com",
+    phone: "+63 900 000 0000",
+    navItems: [
+      { id: 1, href: "#home", label: "Home" },
+      { id: 2, href: "#about", label: "About" },
+      { id: 3, href: "#services", label: "Services" },
+      { id: 4, href: "#contact", label: "Contact" },
+    ],
+
     children: (
       <>
+     
 
         <Section id="home" title="Dashboard" style="bg-gray-100">
           <div className="flex min-h-[70vh] items-center justify-center rounded-2xl bg-white p-10 shadow-md">

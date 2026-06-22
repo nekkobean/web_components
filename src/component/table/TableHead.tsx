@@ -1,7 +1,7 @@
 import React from "react";
 import { TableHeadCell } from "./types";
 import { alignment } from "./alignment";
-import "web_components/src/themes/tailwind.css";
+// import "web_components/src/themes/tailwind.css";
 
 export interface TableHeadProps {
   rowData: TableHeadCell[];

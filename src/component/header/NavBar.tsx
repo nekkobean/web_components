@@ -1,16 +1,12 @@
 import React from "react";
-import "web_components/src/themes/tailwind.css";
+import type {
+  NavItem,
+  NavigationProps,
+} from "./types";
+// import "web_components/src/themes/tailwind.css";
 
-export interface NavBarProps {
-    navBar: {
-    id: number;
-    href: string;
-    label: string;
-  }[];
-
-  style?: string;
-
-  onItemClick?: (label: string) => void;
+export interface NavBarProps extends NavigationProps {
+  navBar: NavItem[];
 }
 
 

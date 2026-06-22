@@ -1,4 +1,4 @@
-import "web_components/src/themes/tailwind.css";
+// import "web_components/src/themes/tailwind.css";
 
 export interface FooterBottomProps {
   copyright: string;

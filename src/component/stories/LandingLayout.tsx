@@ -10,24 +10,31 @@ import { FooterIcon } from "../footer/FooterIcon";
 import { QuickLink } from "../footer/QuickLink";
 import { FooterContact } from "../footer/FooterContact";
 import { FooterBottom } from "../footer/FooterBottom";
-import "web_components/src/themes/tailwind.css";
+import { NavItem } from "../header";
+// import "web_components/src/themes/tailwind.css";
 
 export interface LandingLayoutProps {
   children: React.ReactNode;
+  navItems: NavItem[];
+  logo?: string;
+  companyTitle?: string;
+  description?: string;
+  email?: string;
+  phone?: string;
 }
 
 export const LandingLayout: React.FC<LandingLayoutProps> = ({
   children,
+  navItems,
+  logo,
+  companyTitle,
+  description = "",
+  email = "",
+  phone = ""
 }) => {
   const [currentPage, setCurrentPage] =
-    React.useState("Home");
+  React.useState(navItems[0]?.label || "Home");
 
-  const navItems = [
-    { id: 1, href: "#home", label: "Home" },
-    { id: 2, href: "#about", label: "About" },
-    { id: 3, href: "#services", label: "Services" },
-    { id: 4, href: "#contact", label: "Contact" },
-  ];
 
   return (
     <div className="w-full scroll-smooth">
@@ -36,8 +43,8 @@ export const LandingLayout: React.FC<LandingLayoutProps> = ({
         <Cheader>
           <div className="flex items-center gap-4 lg:gap-10">
             <Icon
-              logo="/icon.svg"
-              title="QTEK"
+              logo={logo || ""}
+              title={companyTitle || "Company Name"}
             />
 
             <NavBar
@@ -81,9 +88,9 @@ export const LandingLayout: React.FC<LandingLayoutProps> = ({
       {children}
       
       <Cfooter>
-        <FooterIcon description="Building modern and scalable digital solutions.">
+        <FooterIcon description={description}>
           <div className="scale-150 origin-left">
-            <Icon logo="/icon.svg" title="QTEK" />
+            <Icon logo={logo || ""} title={companyTitle || "Company Name"} />
           </div>
         </FooterIcon>
 
@@ -94,8 +101,8 @@ export const LandingLayout: React.FC<LandingLayoutProps> = ({
         />
 
         <FooterContact
-          email="hello@qtek.com"
-          phone="+63 900 000 0000"
+          email={email}
+          phone={phone}
           socials={[
             { id: 1, label: "Facebook", href: "#" },
             { id: 2, label: "LinkedIn", href: "#" },
