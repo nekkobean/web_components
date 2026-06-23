@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import type { NavItem, NavigationProps } from "./types";
-// import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 export interface DrawerProps extends NavigationProps {
   navDrawer: NavItem[];

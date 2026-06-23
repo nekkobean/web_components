@@ -11,7 +11,7 @@ import { QuickLink } from "../footer/QuickLink";
 import { FooterContact } from "../footer/FooterContact";
 import { FooterBottom } from "../footer/FooterBottom";
 import { NavItem } from "../header";
-// import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 export interface LandingLayoutProps {
   children: React.ReactNode;

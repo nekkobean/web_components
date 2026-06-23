@@ -3,7 +3,7 @@ import type {
   NavItem,
   NavigationProps,
 } from "./types";
-// import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 export interface NavBarProps extends NavigationProps {
   navBar: NavItem[];
