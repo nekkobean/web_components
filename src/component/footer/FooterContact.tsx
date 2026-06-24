@@ -1,4 +1,4 @@
-import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 export interface FooterContactProps {
   email: string;

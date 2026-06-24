@@ -1,5 +1,5 @@
 import { Loader } from "../spinner/Loader";
-import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 //parameters
 export interface ButtonProps {
@@ -22,6 +22,7 @@ export interface ButtonProps {
   isLoading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
+  style?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -30,6 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
   isLoading = false,
   disabled = false,
   onClick,
+  style,
 }) => {
   const colors = {
     primary: "bg-primary-button text-primary",
@@ -49,7 +51,7 @@ export const Button: React.FC<ButtonProps> = ({
         } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
        ${
          isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
-       }`}
+       } ${style || ""}`}
         disabled={isDisabled}
         onClick={onClick}
       >

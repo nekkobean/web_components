@@ -1,0 +1,23 @@
+{
+ "extends": "./tsconfig.json",
+ "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+
+},
+"include": [
+    "src/index.ts",
+    "src/declaration.d.ts",
+    "src/component/**/*.ts",
+    "src/component/**/*.tsx"
+],
+"exclude": [
+    "scra/app/**",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+
+]
+}

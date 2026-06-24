@@ -3,6 +3,9 @@ import "./themes/tailwind.css";
 
 export { Button } from './component/button';
 export { Card } from './component/card';
+export { CardImage } from './component/card';
+export { CardContent } from './component/card';
+export { CardFooter } from './component/card';
 export { Cfooter } from './component/footer';
 export { FooterIcon } from './component/footer';
 export { FooterBottom } from './component/footer';

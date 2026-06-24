@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "web_components/src/themes/tailwind.css";
+import "../../themes/tailwind.css";
 
 export interface CheckBoxProps {
   id: string;

@@ -12,3 +12,5 @@ export type { NavBarProps } from "./NavBar";
 
 export { SearchBar } from "./SearchBar";
 export type { SearchBarProps } from "./SearchBar";
+
+export type { NavItem, NavigationProps } from "./types";
