@@ -1,7 +1,5 @@
 import "../../themes/tailwind.css";
-
 import React, { useState } from "react";
-
 import { Modal } from "../modal/Modal";
 
 export interface SearchBarProps {
@@ -16,9 +14,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   children,
 }) => {
   const [openSearch, setOpenSearch] = useState(false);
-
   return (
-    <div className={`relative ${style || ""}`}>
+    <div className={`relative shrink-0 ${style || ""}`}>
       <div className="hidden md:block relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +39,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
           />
         </svg>
-
         <input
           type="text"
           placeholder={placeholder}
@@ -66,10 +62,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           "
         />
       </div>
-
       <button
         onClick={() => setOpenSearch(true)}
         className="
+          shrink-0
           flex
           md:hidden
           items-center
@@ -99,13 +95,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           />
         </svg>
       </button>
-
       <Modal
         isOpen={openSearch}
         title="Search"
         onClose={() => setOpenSearch(false)}
       >
-        {children ? (children ) : (
+        {children ? (children) : (
           <div className="relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +124,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-
             <input
               autoFocus
               type="text"

@@ -5,17 +5,13 @@ export interface CheaderProps {
     children?: React.ReactNode;
     style?: string;
 }
+
 export const Cheader: React.FC<CheaderProps> = ({ children, style }) => {
     return (
         <header className={`w-full bg-white border-b border-light-gray shadow-sm ${style}`}>
-            <div className="flex items-center justify-between px-6 py-4">
-
+            <div className="relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0">
                 {children}
             </div>
         </header>
     );
 }
-
-
-
-

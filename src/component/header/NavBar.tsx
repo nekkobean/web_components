@@ -9,7 +9,6 @@ export interface NavBarProps extends NavigationProps {
   navBar: NavItem[];
 }
 
-
 export const NavBar: React.FC<NavBarProps> = ({
   navBar = [],
   style,
@@ -20,12 +19,19 @@ export const NavBar: React.FC<NavBarProps> = ({
       className={`
         hidden
         md:flex
-        gap-12
+        flex-1
+        gap-6
+        lg:gap-12
         justify-center
         items-center
+       
         absolute
         left-1/2
         -translate-x-1/2
+        
+        min-w-0
+        overflow-x-auto
+        whitespace-nowrap
         ${style || ""}
       `}
     >
@@ -37,7 +43,8 @@ export const NavBar: React.FC<NavBarProps> = ({
             onItemClick?.(item.label)
           }
           className="
-            text-lg
+            text-base
+            lg:text-lg
             font-bold
             text-black
             hover:text-green

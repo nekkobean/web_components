@@ -9,12 +9,21 @@ export interface DrawerProps extends NavigationProps {
 
 export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemClick }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
-
   return (
     <>
       <button
         onClick={() => setOpenDrawer(true)}
-        className=" flex md:hidden items-center justify-center h-10 w-10 rounded-md hover:bg-gray-100"
+        className="
+          shrink-0
+          flex
+          md:hidden
+          items-center
+          justify-center
+          h-10
+          w-10
+          rounded-md
+          hover:bg-gray-100
+        "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,17 +50,14 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
       )}
       <aside
         className={`
-          fixed top-0 
-          left-0 z-50 
+          fixed top-0
+          left-0 z-50
           h-screen w-65
-           bg-white 
-           shadow-lg 
+          bg-white
+          shadow-lg
           transition-transform duration-300
-
           ${openDrawer ? "translate-x-0" : "-translate-x-full"}
-
           md:hidden
-
           ${style || ""}
         `}
       >
@@ -60,10 +66,8 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
             flex
             items-center
             justify-between
-
             border-b
             border-light-gray
-
             px-5
             py-4
           "
@@ -74,12 +78,9 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
               flex
               items-center
               justify-center
-
               h-10
               w-10
-
               rounded-md
-
               hover:bg-gray-100
             "
           >
@@ -90,7 +91,6 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
               className="
                 h-6
                 w-6
-
                 text-gray-700
               "
             >
@@ -100,10 +100,8 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
                 clipRule="evenodd"
               />
             </svg>
-
           </button>
         </div>
-
         <div className="flex flex-col p-4">{navDrawer.map((item) => (
             <a
               key={item.id}
@@ -127,4 +125,3 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
     </>
   );
 };
-

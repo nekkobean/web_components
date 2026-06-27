@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 export const FullPage: Story = {
   args: { 
     logo: "icon.svg",
-    companyTitle: "QTEK",
+    companyTitle: "Hello my Sunshin Inchjhjhjhjhj",
     description: "A brief description of the company.",
     email: "hello@qtek.com",
     phone: "+63 900 000 0000",
@@ -37,6 +37,7 @@ export const FullPage: Story = {
       { id: 2, href: "#about", label: "About" },
       { id: 3, href: "#services", label: "Services" },
       { id: 4, href: "#contact", label: "Contact" },
+      { id: 5, href: "#hello-world", label: "Hello World" },
     ],
 
     children: (
