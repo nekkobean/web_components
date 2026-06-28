@@ -30,7 +30,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             h-4
             w-4
             -translate-y-1/2
-            text-gray-400
+            text-light-gray
           "
         >
           <path
@@ -56,6 +56,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             pl-9
             text-xs
             sm:text-sm
+            text-gray
             focus:outline-none
             focus:ring-2
             focus:ring-blue
@@ -73,7 +74,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           h-10
           w-10
           rounded-md
-          hover:bg-gray-100
+          hover:bg-light-gray
         "
       >
         <svg
@@ -85,7 +86,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           className="
             h-6
             w-6
-            text-gray-700
+            text-gray
           "
         >
           <path
@@ -115,7 +116,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 h-4
                 w-4
                 -translate-y-1/2
-                text-gray-400
+                text-gray
               "
             >
               <path
@@ -138,6 +139,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 py-2
                 pl-9
                 text-sm
+                text-gray
                 focus:outline-none
                 focus:ring-2
                 focus:ring-blue

@@ -22,7 +22,7 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
           h-10
           w-10
           rounded-md
-          hover:bg-gray-100
+          hover:bg-light-gray
         "
       >
         <svg
@@ -32,7 +32,7 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
           className="
             h-6
             w-6
-            text-gray-700
+            text-light-black
           "
         >
           <path
@@ -72,7 +72,7 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
             py-4
           "
         >
-          <h2 className="text-lg font-semibold">Menu</h2>
+          <h2 className="text-lg font-semibold text-light-black">Menu</h2>
           <button onClick={() => setOpenDrawer(false)}
               className="
               flex
@@ -81,7 +81,7 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
               h-10
               w-10
               rounded-md
-              hover:bg-gray-100
+              hover:bg-light-gray
             "
           >
             <svg
@@ -91,7 +91,7 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
               className="
                 h-6
                 w-6
-                text-gray-700
+                text-light-black
               "
             >
               <path
@@ -114,7 +114,8 @@ export const Drawer: React.FC<DrawerProps> = ({ navDrawer = [], style, onItemCli
                 rounded-md
                 px-4
                 py-3
-                hover:bg-gray-100
+                hover:bg-light-gray
+                text-black
               "
             >
               {item.label}

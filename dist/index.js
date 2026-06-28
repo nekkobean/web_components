@@ -9,23 +9,26 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		delete: "bg-delete-button text-primary",
 		disabled: "bg-disabled-button text-primary"
 	}, u = i ? /* @__PURE__ */ t(a, {}) : null, d = o || i;
-	return /* @__PURE__ */ t("div", { children: /* @__PURE__ */ n("button", {
-		className: `${l[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
+	return /* @__PURE__ */ t("div", {
+		className: "w-full md:w-auto",
+		children: /* @__PURE__ */ n("button", {
+			className: `${l[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
        ${d ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"} ${c || ""}`,
-		disabled: d,
-		onClick: s,
-		children: [u, r]
-	}) });
+			disabled: d,
+			onClick: s,
+			children: [u, r]
+		})
+	});
 }, s = ({ children: e }) => /* @__PURE__ */ t("div", {
 	className: "bg-primary w-full max-w-sm rounded-lg shadow-md overflow-hidden",
 	children: e
-}), c = ({ title: e, description: r }) => /* @__PURE__ */ n("div", {
+}), c = ({ title: e, description: r, titleClassName: i, descriptionClassName: a }) => /* @__PURE__ */ n("div", {
 	className: "p-10",
 	children: [/* @__PURE__ */ t("h2", {
-		className: "text-lg font-bold mb-2 text-black",
+		className: `text-lg font-bold mb-2 text-black whitespace-pre-line ${i || ""}`,
 		children: e
 	}), /* @__PURE__ */ t("p", {
-		className: "text-gray text-sm font-normal",
+		className: `text-gray text-sm font-normal whitespace-pre-line ${a || ""}`,
 		children: r
 	})]
 }), l = ({ children: e }) => /* @__PURE__ */ t("div", {
@@ -102,7 +105,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 }), _ = ({ children: e, style: n }) => /* @__PURE__ */ t("header", {
 	className: `w-full bg-white border-b border-light-gray shadow-sm ${n}`,
 	children: /* @__PURE__ */ t("div", {
-		className: "flex items-center justify-between px-6 py-4",
+		className: "relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0",
 		children: e
 	})
 }), v = ({ navDrawer: r = [], style: a, onItemClick: o }) => {
@@ -110,12 +113,12 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	return /* @__PURE__ */ n(e, { children: [
 		/* @__PURE__ */ t("button", {
 			onClick: () => c(!0),
-			className: " flex md:hidden items-center justify-center h-10 w-10 rounded-md hover:bg-gray-100",
+			className: "\r\n          shrink-0\r\n          flex\r\n          md:hidden\r\n          items-center\r\n          justify-center\r\n          h-10\r\n          w-10\r\n          rounded-md\r\n          hover:bg-light-gray\r\n        ",
 			children: /* @__PURE__ */ t("svg", {
 				xmlns: "http://www.w3.org/2000/svg",
 				viewBox: "0 0 24 24",
 				fill: "currentColor",
-				className: "\r\n            h-6\r\n            w-6\r\n            text-gray-700\r\n          ",
+				className: "\r\n            h-6\r\n            w-6\r\n            text-light-black\r\n          ",
 				children: /* @__PURE__ */ t("path", {
 					fillRule: "evenodd",
 					d: "M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z",
@@ -129,32 +132,29 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		}),
 		/* @__PURE__ */ n("aside", {
 			className: `
-          fixed top-0 
-          left-0 z-50 
+          fixed top-0
+          left-0 z-50
           h-screen w-65
-           bg-white 
-           shadow-lg 
+          bg-white
+          shadow-lg
           transition-transform duration-300
-
           ${s ? "translate-x-0" : "-translate-x-full"}
-
           md:hidden
-
           ${a || ""}
         `,
 			children: [/* @__PURE__ */ n("div", {
-				className: "\r\n            flex\r\n            items-center\r\n            justify-between\r\n\r\n            border-b\r\n            border-light-gray\r\n\r\n            px-5\r\n            py-4\r\n          ",
+				className: "\r\n            flex\r\n            items-center\r\n            justify-between\r\n            border-b\r\n            border-light-gray\r\n            px-5\r\n            py-4\r\n          ",
 				children: [/* @__PURE__ */ t("h2", {
-					className: "text-lg font-semibold",
+					className: "text-lg font-semibold text-light-black",
 					children: "Menu"
 				}), /* @__PURE__ */ t("button", {
 					onClick: () => c(!1),
-					className: "\r\n              flex\r\n              items-center\r\n              justify-center\r\n\r\n              h-10\r\n              w-10\r\n\r\n              rounded-md\r\n\r\n              hover:bg-gray-100\r\n            ",
+					className: "\r\n              flex\r\n              items-center\r\n              justify-center\r\n              h-10\r\n              w-10\r\n              rounded-md\r\n              hover:bg-light-gray\r\n            ",
 					children: /* @__PURE__ */ t("svg", {
 						xmlns: "http://www.w3.org/2000/svg",
 						viewBox: "0 0 24 24",
 						fill: "currentColor",
-						className: "\r\n                h-6\r\n                w-6\r\n\r\n                text-gray-700\r\n              ",
+						className: "\r\n                h-6\r\n                w-6\r\n                text-light-black\r\n              ",
 						children: /* @__PURE__ */ t("path", {
 							fillRule: "evenodd",
 							d: "M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 01-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06Z",
@@ -169,7 +169,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 					onClick: () => {
 						o?.(e.label), c(!1);
 					},
-					className: "\r\n                rounded-md\r\n                px-4\r\n                py-3\r\n                hover:bg-gray-100\r\n              ",
+					className: "\r\n                rounded-md\r\n                px-4\r\n                py-3\r\n                hover:bg-light-gray\r\n                text-black\r\n              ",
 					children: e.label
 				}, e.id))
 			})]
@@ -177,37 +177,49 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	] });
 }, y = ({ logo: e = "/logo.svg", title: r = "my Company", style: i, alt: a = "" }) => /* @__PURE__ */ n("div", {
 	className: `
-    flex 
-    items-center 
-    gap-2 
-    sm:gap-3 
-    shrink-0 
-    ${i || ""}
-    `,
+        flex
+        items-center
+        gap-2
+        sm:gap-3
+        shrink-0
+        min-w-0
+        max-w-28
+        sm:max-w-40
+        md:max-w-56
+        ${i || ""}
+      `,
 	children: [/* @__PURE__ */ t("img", {
 		src: e,
 		alt: a,
-		className: "\r\n        h-8\r\n        w-8\r\n        sm:h-10\r\n        sm:w-10\r\n        object-contain"
+		className: "\r\n          h-8\r\n          w-8\r\n          sm:h-10\r\n          sm:w-10\r\n          object-contain\r\n          shrink-0\r\n        "
 	}), /* @__PURE__ */ t("h1", {
-		className: "text-sm sm:text-lg font-bold text-blue",
+		className: "\r\n          text-sm\r\n          sm:text-lg\r\n          font-bold\r\n          text-blue\r\n          truncate\r\n        ",
+		title: r,
 		children: r
 	})]
 }), b = ({ navBar: e = [], style: n, onItemClick: r }) => /* @__PURE__ */ t("nav", {
 	className: `
         hidden
         md:flex
-        gap-12
+        flex-1
+        gap-6
+        lg:gap-12
         justify-center
         items-center
+       
         absolute
         left-1/2
         -translate-x-1/2
+        
+        min-w-0
+        overflow-x-auto
+        whitespace-nowrap
         ${n || ""}
       `,
 	children: e.map((e) => /* @__PURE__ */ t("a", {
 		href: e.href || "#",
 		onClick: () => r?.(e.label),
-		className: "\r\n            text-lg\r\n            font-bold\r\n            text-black\r\n            hover:text-green\r\n            cursor-pointer\r\n          ",
+		className: "\r\n            text-base\r\n            lg:text-lg\r\n            font-bold\r\n            text-black\r\n            hover:text-green\r\n            cursor-pointer\r\n          ",
 		children: e.label
 	}, e.id))
 }), x = ({ isOpen: r, onClose: i, title: a, children: o }) => r ? /* @__PURE__ */ n(e, { children: [/* @__PURE__ */ t("div", {
@@ -250,7 +262,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 })] }) : null, S = ({ placeholder: e = "Search...", style: r, children: a }) => {
 	let [o, s] = i(!1);
 	return /* @__PURE__ */ n("div", {
-		className: `relative ${r || ""}`,
+		className: `relative shrink-0 ${r || ""}`,
 		children: [
 			/* @__PURE__ */ n("div", {
 				className: "hidden md:block relative",
@@ -260,7 +272,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 					viewBox: "0 0 24 24",
 					stroke: "currentColor",
 					strokeWidth: 2,
-					className: "\r\n            absolute\r\n            left-3\r\n            top-1/2\r\n            h-4\r\n            w-4\r\n            -translate-y-1/2\r\n            text-gray-400\r\n          ",
+					className: "\r\n            absolute\r\n            left-3\r\n            top-1/2\r\n            h-4\r\n            w-4\r\n            -translate-y-1/2\r\n            text-light-gray\r\n          ",
 					children: /* @__PURE__ */ t("path", {
 						strokeLinecap: "round",
 						strokeLinejoin: "round",
@@ -269,19 +281,19 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 				}), /* @__PURE__ */ t("input", {
 					type: "text",
 					placeholder: e,
-					className: "\r\n            w-27.5\r\n            sm:w-40\r\n            md:w-50\r\n            lg:w-60\r\n            rounded-md\r\n            border\r\n            border-light-gray\r\n            bg-white\r\n            px-3\r\n            py-2\r\n            pl-9\r\n            text-xs\r\n            sm:text-sm\r\n            focus:outline-none\r\n            focus:ring-2\r\n            focus:ring-blue\r\n          "
+					className: "\r\n            w-27.5\r\n            sm:w-40\r\n            md:w-50\r\n            lg:w-60\r\n            rounded-md\r\n            border\r\n            border-light-gray\r\n            bg-white\r\n            px-3\r\n            py-2\r\n            pl-9\r\n            text-xs\r\n            sm:text-sm\r\n            text-gray\r\n            focus:outline-none\r\n            focus:ring-2\r\n            focus:ring-blue\r\n          "
 				})]
 			}),
 			/* @__PURE__ */ t("button", {
 				onClick: () => s(!0),
-				className: "\r\n          flex\r\n          md:hidden\r\n          items-center\r\n          justify-center\r\n          h-10\r\n          w-10\r\n          rounded-md\r\n          hover:bg-gray-100\r\n        ",
+				className: "\r\n          shrink-0\r\n          flex\r\n          md:hidden\r\n          items-center\r\n          justify-center\r\n          h-10\r\n          w-10\r\n          rounded-md\r\n          hover:bg-light-gray\r\n        ",
 				children: /* @__PURE__ */ t("svg", {
 					xmlns: "http://www.w3.org/2000/svg",
 					fill: "none",
 					viewBox: "0 0 24 24",
 					stroke: "currentColor",
 					strokeWidth: 2,
-					className: "\r\n            h-6\r\n            w-6\r\n            text-gray-700\r\n          ",
+					className: "\r\n            h-6\r\n            w-6\r\n            text-gray\r\n          ",
 					children: /* @__PURE__ */ t("path", {
 						strokeLinecap: "round",
 						strokeLinejoin: "round",
@@ -301,7 +313,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 						viewBox: "0 0 24 24",
 						stroke: "currentColor",
 						strokeWidth: 2,
-						className: "\r\n                absolute\r\n                left-3\r\n                top-1/2\r\n                h-4\r\n                w-4\r\n                -translate-y-1/2\r\n                text-gray-400\r\n              ",
+						className: "\r\n                absolute\r\n                left-3\r\n                top-1/2\r\n                h-4\r\n                w-4\r\n                -translate-y-1/2\r\n                text-gray\r\n              ",
 						children: /* @__PURE__ */ t("path", {
 							strokeLinecap: "round",
 							strokeLinejoin: "round",
@@ -311,7 +323,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 						autoFocus: !0,
 						type: "text",
 						placeholder: e,
-						className: "\r\n                w-full\r\n                rounded-md\r\n                border\r\n                border-light-gray\r\n                bg-white\r\n                px-3\r\n                py-2\r\n                pl-9\r\n                text-sm\r\n                focus:outline-none\r\n                focus:ring-2\r\n                focus:ring-blue\r\n              "
+						className: "\r\n                w-full\r\n                rounded-md\r\n                border\r\n                border-light-gray\r\n                bg-white\r\n                px-3\r\n                py-2\r\n                pl-9\r\n                text-sm\r\n                text-gray\r\n                focus:outline-none\r\n                focus:ring-2\r\n                focus:ring-blue\r\n              "
 					})]
 				})
 			})
@@ -418,7 +430,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 }), A = ({ items: e }) => /* @__PURE__ */ t("nav", {
 	"aria-label": "Breadcrumb",
 	children: /* @__PURE__ */ t("ol", {
-		className: "\r\n          flex\r\n          flex-wrap\r\n          items-center\r\n          gap-2\r\n          text-sm\r\n        ",
+		className: "\r\n          flex\r\n          flex-wrap\r\n          items-center\r\n          gap-2\r\n          text-sm\r\n          text-light-black\r\n        ",
 		children: e.map((r, i) => {
 			let a = i === e.length - 1;
 			return /* @__PURE__ */ n("li", {
@@ -428,10 +440,10 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 					children: r.label
 				}) : /* @__PURE__ */ t("a", {
 					href: r.href,
-					className: "\r\n                    text-gray-600\r\n                    transition-colors\r\n                    hover:text-blue-600\r\n                    hover:underline\r\n                  ",
+					className: "\r\n                    text-light-black\r\n                    transition-colors\r\n                    hover:text-blue-600\r\n                    hover:underline\r\n                  ",
 					children: r.label
 				}), !a && /* @__PURE__ */ t("span", {
-					className: "text-gray-400",
+					className: "text-light-black",
 					children: ">"
 				})]
 			}, r.id);

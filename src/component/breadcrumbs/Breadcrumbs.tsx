@@ -15,6 +15,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
           items-center
           gap-2
           text-sm
+          text-light-black
         "
       >
         {items.map((item, index) => {
@@ -43,7 +44,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
                 <a
                   href={item.href}
                   className="
-                    text-gray-600
+                    text-light-black
                     transition-colors
                     hover:text-blue-600
                     hover:underline
@@ -54,7 +55,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
               )}
 
               {!isLast && (
-                <span className="text-gray-400">
+                <span className="text-light-black">
                   &gt;
                 </span>
               )}
