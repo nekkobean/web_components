@@ -21,6 +21,12 @@ export interface LandingLayoutProps {
   description?: string;
   email?: string;
   phone?: string;
+  copyright?: string;
+  socials?: {
+    id: number;
+    label: string;
+    href: string;
+  }[];
 }
 
 export const LandingLayout: React.FC<LandingLayoutProps> = ({
@@ -30,7 +36,9 @@ export const LandingLayout: React.FC<LandingLayoutProps> = ({
   companyTitle,
   description = "",
   email = "",
-  phone = ""
+  phone = "",
+  socials = [],
+  copyright = ""
 }) => {
   const [currentPage, setCurrentPage] =
   React.useState(navItems[0]?.label || "Home");
@@ -103,14 +111,10 @@ export const LandingLayout: React.FC<LandingLayoutProps> = ({
         <FooterContact
           email={email}
           phone={phone}
-          socials={[
-            { id: 1, label: "Facebook", href: "#" },
-            { id: 2, label: "LinkedIn", href: "#" },
-            { id: 3, label: "GitHub", href: "#" },
-          ]}
+          socials={socials}
         />
 
-        <FooterBottom copyright="© 2026 QTEK. All rights reserved." />
+        <FooterBottom copyright={copyright || ""} />
       </Cfooter>
     </div>
   );

@@ -449,8 +449,8 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			}, r.id);
 		})
 	})
-}), j = ({ children: e, navItems: i, logo: a, companyTitle: o, description: s = "", email: c = "", phone: l = "" }) => {
-	let [u, g] = r.useState(i[0]?.label || "Home");
+}), j = ({ children: e, navItems: i, logo: a, companyTitle: o, description: s = "", email: c = "", phone: l = "", socials: u = [] }) => {
+	let [g, x] = r.useState(i[0]?.label || "Home");
 	return /* @__PURE__ */ n("div", {
 		className: "w-full scroll-smooth",
 		children: [
@@ -463,13 +463,13 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 						title: o || "Company Name"
 					}), /* @__PURE__ */ t(b, {
 						navBar: i,
-						onItemClick: g
+						onItemClick: x
 					})]
 				}), /* @__PURE__ */ n("div", {
 					className: "flex shrink-0 items-center gap-2 sm:gap-3",
 					children: [/* @__PURE__ */ t(S, {}), /* @__PURE__ */ t(v, {
 						navDrawer: i,
-						onItemClick: g
+						onItemClick: x
 					})]
 				})] })
 			}),
@@ -477,7 +477,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 				className: " \r\n            mx-auto\r\n            max-w-full\r\n            px-6\r\n            py-4\r\n            sticky\r\n            z-40\r\n            top-16\r\n            bg-light-gray",
 				children: /* @__PURE__ */ t(A, { items: [{
 					id: 1,
-					label: u,
+					label: g,
 					href: "#"
 				}] })
 			}),
@@ -496,28 +496,12 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 				/* @__PURE__ */ t(h, {
 					title: "Quick Links",
 					links: i,
-					onItemClick: g
+					onItemClick: x
 				}),
 				/* @__PURE__ */ t(p, {
 					email: c,
 					phone: l,
-					socials: [
-						{
-							id: 1,
-							label: "Facebook",
-							href: "#"
-						},
-						{
-							id: 2,
-							label: "LinkedIn",
-							href: "#"
-						},
-						{
-							id: 3,
-							label: "GitHub",
-							href: "#"
-						}
-					]
+					socials: u
 				}),
 				/* @__PURE__ */ t(f, { copyright: "© 2026 QTEK. All rights reserved." })
 			] })

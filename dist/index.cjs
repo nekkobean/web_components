@@ -232,7 +232,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
                     transition-colors\r
                     hover:text-blue-600\r
                     hover:underline\r
-                  `,children:t.label}),!r&&(0,c.jsx)(`span`,{className:`text-light-black`,children:`>`})]},t.id)})})}),I=({children:e,navItems:t,logo:n,companyTitle:r,description:i=``,email:a=``,phone:o=``})=>{let[s,u]=l.default.useState(t[0]?.label||`Home`);return(0,c.jsxs)(`div`,{className:`w-full scroll-smooth`,children:[(0,c.jsx)(`div`,{className:`sticky top-0 z-50 bg-white`,children:(0,c.jsxs)(S,{children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-4 lg:gap-10`,children:[(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`}),(0,c.jsx)(T,{navBar:t,onItemClick:u})]}),(0,c.jsxs)(`div`,{className:`flex shrink-0 items-center gap-2 sm:gap-3`,children:[(0,c.jsx)(D,{}),(0,c.jsx)(C,{navDrawer:t,onItemClick:u})]})]})}),(0,c.jsx)(`div`,{className:` \r
+                  `,children:t.label}),!r&&(0,c.jsx)(`span`,{className:`text-light-black`,children:`>`})]},t.id)})})}),I=({children:e,navItems:t,logo:n,companyTitle:r,description:i=``,email:a=``,phone:o=``,socials:s=[]})=>{let[u,d]=l.default.useState(t[0]?.label||`Home`);return(0,c.jsxs)(`div`,{className:`w-full scroll-smooth`,children:[(0,c.jsx)(`div`,{className:`sticky top-0 z-50 bg-white`,children:(0,c.jsxs)(S,{children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-4 lg:gap-10`,children:[(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`}),(0,c.jsx)(T,{navBar:t,onItemClick:d})]}),(0,c.jsxs)(`div`,{className:`flex shrink-0 items-center gap-2 sm:gap-3`,children:[(0,c.jsx)(D,{}),(0,c.jsx)(C,{navDrawer:t,onItemClick:d})]})]})}),(0,c.jsx)(`div`,{className:` \r
             mx-auto\r
             max-w-full\r
             px-6\r
@@ -240,7 +240,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
             sticky\r
             z-40\r
             top-16\r
-            bg-light-gray`,children:(0,c.jsx)(F,{items:[{id:1,label:s,href:`#`}]})}),e,(0,c.jsxs)(g,{children:[(0,c.jsx)(y,{description:i,children:(0,c.jsx)(`div`,{className:`scale-150 origin-left`,children:(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`})})}),(0,c.jsx)(b,{title:`Quick Links`,links:t,onItemClick:u}),(0,c.jsx)(v,{email:a,phone:o,socials:[{id:1,label:`Facebook`,href:`#`},{id:2,label:`LinkedIn`,href:`#`},{id:3,label:`GitHub`,href:`#`}]}),(0,c.jsx)(_,{copyright:`© 2026 QTEK. All rights reserved.`})]})]})},L=({children:e,style:t,maxRows:n=5})=>(0,c.jsx)(`div`,{className:`
+            bg-light-gray`,children:(0,c.jsx)(F,{items:[{id:1,label:u,href:`#`}]})}),e,(0,c.jsxs)(g,{children:[(0,c.jsx)(y,{description:i,children:(0,c.jsx)(`div`,{className:`scale-150 origin-left`,children:(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`})})}),(0,c.jsx)(b,{title:`Quick Links`,links:t,onItemClick:d}),(0,c.jsx)(v,{email:a,phone:o,socials:s}),(0,c.jsx)(_,{copyright:`© 2026 QTEK. All rights reserved.`})]})]})},L=({children:e,style:t,maxRows:n=5})=>(0,c.jsx)(`div`,{className:`
         w-full
         overflow-hidden
         rounded-md

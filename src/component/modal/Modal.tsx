@@ -1,6 +1,7 @@
 import React from "react";
 import "../../themes/tailwind.css";
 
+
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
