@@ -1,7 +1,5 @@
 import "../../themes/tailwind.css";
-
 import React, { useState } from "react";
-
 import { Modal } from "../modal/Modal";
 
 export interface SearchBarProps {
@@ -16,9 +14,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   children,
 }) => {
   const [openSearch, setOpenSearch] = useState(false);
-
   return (
-    <div className={`relative ${style || ""}`}>
+    <div className={`relative shrink-0 ${style || ""}`}>
       <div className="hidden md:block relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +30,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             h-4
             w-4
             -translate-y-1/2
-            text-gray-400
+            text-light-gray
           "
         >
           <path
@@ -42,7 +39,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
           />
         </svg>
-
         <input
           type="text"
           placeholder={placeholder}
@@ -60,16 +56,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             pl-9
             text-xs
             sm:text-sm
+            text-gray
             focus:outline-none
             focus:ring-2
             focus:ring-blue
           "
         />
       </div>
-
       <button
         onClick={() => setOpenSearch(true)}
         className="
+          shrink-0
           flex
           md:hidden
           items-center
@@ -77,7 +74,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           h-10
           w-10
           rounded-md
-          hover:bg-gray-100
+          hover:bg-light-gray
         "
       >
         <svg
@@ -89,7 +86,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           className="
             h-6
             w-6
-            text-gray-700
+            text-gray
           "
         >
           <path
@@ -99,13 +96,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           />
         </svg>
       </button>
-
       <Modal
         isOpen={openSearch}
         title="Search"
         onClose={() => setOpenSearch(false)}
       >
-        {children ? (children ) : (
+        {children ? (children) : (
           <div className="relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +116,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 h-4
                 w-4
                 -translate-y-1/2
-                text-gray-400
+                text-gray
               "
             >
               <path
@@ -129,7 +125,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-
             <input
               autoFocus
               type="text"
@@ -144,6 +139,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 py-2
                 pl-9
                 text-sm
+                text-gray
                 focus:outline-none
                 focus:ring-2
                 focus:ring-blue

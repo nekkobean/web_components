@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 export const FullPage: Story = {
   args: { 
     logo: "icon.svg",
-    companyTitle: "QTEK",
+    companyTitle: "Hello my Sunshin Inchjhjhjhjhj",
     description: "A brief description of the company.",
     email: "hello@qtek.com",
     phone: "+63 900 000 0000",
@@ -37,6 +37,7 @@ export const FullPage: Story = {
       { id: 2, href: "#about", label: "About" },
       { id: 3, href: "#services", label: "Services" },
       { id: 4, href: "#contact", label: "Contact" },
+      { id: 5, href: "#hello-world", label: "Hello World" },
     ],
 
     children: (
@@ -68,8 +69,24 @@ export const FullPage: Story = {
 
         <Section id="services" title="Services" style="bg-gray-100">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <Card><CardContent title="Web Design" description="..." /></Card>
-            <Card><CardContent title="Development" description="..." /></Card>
+            <Card><CardContent title="Web Design" description="maganda
+            cute
+            cuttie" /></Card>
+            <Card><CardContent
+  title="Education"
+  description={
+    <div className="whitespace-pre-line">
+ {`Polytechnic University of the Philippines – San Pedro Campus
+Bachelor of Science in Information Technology
+2022 – Present
+
+General Mariano Alvarez Technical High School
+Science, Technology, Engineering, and Mathematics (STEM)
+2020 – 2022
+Graduated with High Honors`}
+    </div>
+ }
+/></Card>
           </div>
         </Section>
 

@@ -44,4 +44,4 @@ export default defineConfig({
     copyPublicDir: false,
     emptyOutDir: true,
   },
-});4
+});

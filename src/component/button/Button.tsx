@@ -40,15 +40,16 @@ export const Button: React.FC<ButtonProps> = ({
     delete: "bg-delete-button text-primary",
     disabled: "bg-disabled-button text-primary",
   };
+
   const loader = isLoading ? <Loader /> : null;
   const isDisabled = disabled || isLoading;
 
   return (
-    <div>
+    <div className="w-full md:w-auto">
       <button
         className={`${
           colors[variant]
-        } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full justify-center md:w-70 lg:w-25
+        } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
        ${
          isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
        } ${style || ""}`}

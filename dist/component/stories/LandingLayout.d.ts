@@ -8,5 +8,10 @@ export interface LandingLayoutProps {
     description?: string;
     email?: string;
     phone?: string;
+    socials?: {
+        id: number;
+        label: string;
+        href: string;
+    }[];
 }
 export declare const LandingLayout: React.FC<LandingLayoutProps>;

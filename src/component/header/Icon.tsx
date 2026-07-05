@@ -15,27 +15,42 @@ export const Icon: React.FC<IconProps> = ({
   alt = "",
 }) => {
   return (
-    <div className={`
-    flex 
-    items-center 
-    gap-2 
-    sm:gap-3 
-    shrink-0 
-    ${style || ""}
-    `
-    }>
+    <div
+      className={`
+        flex
+        items-center
+        gap-2
+        sm:gap-3
+        shrink-0
+        min-w-0
+        max-w-28
+        sm:max-w-40
+        md:max-w-56
+        ${style || ""}
+      `}
+    >
       <img
         src={logo}
         alt={alt}
         className="
-        h-8
-        w-8
-        sm:h-10
-        sm:w-10
-        object-contain"
+          h-8
+          w-8
+          sm:h-10
+          sm:w-10
+          object-contain
+          shrink-0
+        "
       />
-
-      <h1 className="text-sm sm:text-lg font-bold text-blue">
+      <h1
+        className="
+          text-sm
+          sm:text-lg
+          font-bold
+          text-blue
+          truncate
+        "
+        title={title}
+      >
         {title}
       </h1>
     </div>

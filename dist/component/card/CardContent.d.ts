@@ -1,5 +1,8 @@
+import { ReactNode } from 'react';
 export interface CardContentProps {
-    title: string;
-    description: string;
+    title: ReactNode;
+    description: ReactNode;
+    titleClassName?: string;
+    descriptionClassName?: string;
 }
 export declare const CardContent: React.FC<CardContentProps>;
