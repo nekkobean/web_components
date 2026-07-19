@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
+@source inline("{hover:,}{bg,text,border,ring,decoration,divide,outline,shadow,fill,stroke,accent,caret}-{blue,green,red,orange,light-orange,light-blue,light-green,light-red,white,black,light-black,gray,light-gray,primary,primary-button,secondary-button,restore-button,delete-button,disabled-button}");
+
 @theme {
   --color-*: initial;
   --color-blue: oklch(0.4462 0.1768 263.73);
   --color-green: oklch(0.3958 0.134172 142.6114);
   --color-red: oklch(0.4594 0.1885 29.23);
+  --color-orange: oklch(0.6771 0.2130 37.68);
   --color-light-orange: oklch(0.792 0.1228 68.65);
   --color-light-blue: oklch(0.7889 0.0903 269.59);
   --color-light-green: oklch(0.757 0.193 143.64);
@@ -14,13 +17,11 @@
   --color-light-black: oklch(0.2876 0.0203 260.62);
   --color-gray: oklch(0.4276 0 0);
   --color-light-gray: oklch(0.7826 0 0);
-
   --color-primary-button: oklch(0.2876 0.0203 260.62);
   --color-secondary-button: oklch(0.2876 0.0203 260.62);
   --color-restore-button: oklch(0.2876 0.0203 260.62);
   --color-delete-button: oklch(0.2876 0.0203 260.62);
   --color-disabled-button: oklch(0.2876 0.0203 260.62);
-
   --color-primary: oklch(0.2876 0.0203 260.62);
 }
 @layer base {
@@ -31,7 +32,6 @@
     --color-restore-button: oklch(0.3958 0.134172 142.6114);
     --color-delete-button: oklch(0.4594 0.1885 29.23);
     --color-disabled-button: oklch(0.4276 0 0);
-
     --color-primary: oklch(1 0 0);
   }
   [data-mode="dark"] {
@@ -41,7 +41,6 @@
     --color-restore-button: oklch(0.757 0.193 143.64);
     --color-delete-button: oklch(0.7978 0.1161 19.96);
     --color-disabled-button: oklch(0.7826 0 0);
-
     --color-primary: oklch(0.2221 0 0);
   }
 }

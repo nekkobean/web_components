@@ -1,28 +1,14 @@
 import { Loader } from "../spinner/Loader";
 import "../../themes/tailwind.css";
 
-//parameters
 export interface ButtonProps {
-  /* The variant prop determines the styling of the button. It can be one of the following values:
-   * - "primary": A blue button with white text, used for primary actions.
-   * - "secondary": A gray button with black text and a border, used for secondary actions.
-   * - "restore": A green button with white text, used for restore actions.
-   * - "delete": A red button with white text, used for delete actions.
-   * - "disabled": A gray button with gray text, used for disabled state.
-   * @default "primary"
-   */
   variant?: "primary" | "secondary" | "restore" | "delete" | "disabled";
-  // The label prop is the text that will be displayed on the button. It is optional, but if provided, it will be rendered inside the button.
   label?: string;
-  /*
-   * Optional: If true, the button will show a loading state.
-   * This can be used to indicate that an action is in progress.
-   * @default false
-   */
   isLoading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
   style?: string;
+  type?: "button" | "submit" | "reset"; // add this
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -32,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   onClick,
   style,
+  type = "button", // default to "button" so it never accidentally submits
 }) => {
   const colors = {
     primary: "bg-primary-button text-primary",
@@ -47,15 +34,12 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <div className="w-full md:w-auto">
       <button
-        className={`${
-          colors[variant]
-        } flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
-       ${
-         isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"
-       } ${style || ""}`}
-        disabled={isDisabled}
-        onClick={onClick}
-      >
+  type={type} 
+  className={`${style || colors[variant]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
+   ${isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`}
+  disabled={isDisabled}
+  onClick={onClick}
+>
         {loader}
         {label}
       </button>

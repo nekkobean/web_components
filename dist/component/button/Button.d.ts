@@ -5,5 +5,6 @@ export interface ButtonProps {
     disabled?: boolean;
     onClick?: () => void;
     style?: string;
+    type?: "button" | "submit" | "reset";
 }
 export declare const Button: React.FC<ButtonProps>;

@@ -9,7 +9,7 @@ import { CardFooter } from "./CardFooter";
 import { Button } from "../button";
 
 const meta = {
-  //  The component you're working on
+  
   component: Card,
   subcomponents: { CardContent, CardImage, CardFooter },
   parameters: {
@@ -18,11 +18,11 @@ const meta = {
 } satisfies Meta<typeof Card>;
 
 export default meta;
-//  Type helper to reduce boilerplate
+
 type Story = StoryObj<typeof meta>;
 export const CardWithImage: Story = {
   render: (args) => (
-    <Card {...args}>
+    <Card {...args} style="bg-orange hover:bg-blue transition-transform duration-300 hover:scale-105 hover:shadow-lg">
       <CardImage alt="Qtek" image="/qtek.png" />
       <CardContent
         title="My Company"
@@ -30,7 +30,7 @@ export const CardWithImage: Story = {
       />
       <CardFooter>
         <div className="flex gap-4">
-          <Button variant="primary" label="Click Me" />
+          <Button variant="secondary" label="Click" style="bg-blue text-white hover:bg-orange hover:text-white"   />
           <Button variant="secondary" label="Go Back" />
         </div>
       </CardFooter>

@@ -2,17 +2,23 @@ import React from "react";
 import type {
   NavItem,
   NavigationProps,
+  
 } from "./types";
 import "../../themes/tailwind.css";
 
 export interface NavBarProps extends NavigationProps {
   navBar: NavItem[];
+  style?: string;
+  navLabelClassName?: string;
 }
+  
 
 export const NavBar: React.FC<NavBarProps> = ({
   navBar = [],
   style,
   onItemClick,
+  navLabelClassName = "text-black",
+  
 }) => {
   return (
     <nav
@@ -42,14 +48,13 @@ export const NavBar: React.FC<NavBarProps> = ({
           onClick={() =>
             onItemClick?.(item.label)
           }
-          className="
+          className={`
             text-base
             lg:text-lg
-            font-bold
-            text-black
-            hover:text-green
             cursor-pointer
-          "
+            font-bold
+            
+            ${navLabelClassName || "text-black hover:text-green"}`}
         >
           {item.label}
         </a>

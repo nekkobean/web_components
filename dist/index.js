@@ -1,26 +1,31 @@
 import { Fragment as e, jsx as t, jsxs as n } from "react/jsx-runtime";
 import r, { useState as i } from "react";
 //#region src/component/spinner/Loader.tsx
-var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full h-4 w-4 border-b-2 border-white" }), o = ({ variant: e = "primary", label: r, isLoading: i = !1, disabled: o = !1, onClick: s, style: c }) => {
-	let l = {
+var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full h-4 w-4 border-b-2 border-white" }), o = ({ variant: e = "primary", label: r, isLoading: i = !1, disabled: o = !1, onClick: s, style: c, type: l = "button" }) => {
+	let u = {
 		primary: "bg-primary-button text-primary",
 		secondary: "bg-secondary-button text-primary",
 		restore: "bg-restore-button text-primary",
 		delete: "bg-delete-button text-primary",
 		disabled: "bg-disabled-button text-primary"
-	}, u = i ? /* @__PURE__ */ t(a, {}) : null, d = o || i;
+	}, d = i ? /* @__PURE__ */ t(a, {}) : null, f = o || i;
 	return /* @__PURE__ */ t("div", {
 		className: "w-full md:w-auto",
 		children: /* @__PURE__ */ n("button", {
-			className: `${l[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
-       ${d ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"} ${c || ""}`,
-			disabled: d,
+			type: l,
+			className: `${c || u[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
+   ${f ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`,
+			disabled: f,
 			onClick: s,
-			children: [u, r]
+			children: [d, r]
 		})
 	});
-}, s = ({ children: e }) => /* @__PURE__ */ t("div", {
-	className: "bg-primary w-full max-w-sm rounded-lg shadow-md overflow-hidden",
+}, s = ({ children: e, style: n }) => /* @__PURE__ */ t("div", {
+	className: `
+        w-full max-w-sm rounded-lg shadow-md overflow-hidden
+       
+        ${n || "bg-primary"}
+      `,
 	children: e
 }), c = ({ title: e, description: r, titleClassName: i, descriptionClassName: a }) => /* @__PURE__ */ n("div", {
 	className: "p-10",
@@ -41,14 +46,26 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		alt: e,
 		className: "w-full h-full object-cover"
 	}), i]
-}), d = ({ children: e }) => /* @__PURE__ */ t("footer", {
-	className: "\r\n        w-full\r\n        bg-gray\r\n        text-white\r\n      ",
+}), d = ({ children: e, className: n }) => /* @__PURE__ */ t("footer", {
+	className: `
+        w-full
+        text-white
+        ${n || "bg-gray"}
+      `,
 	children: /* @__PURE__ */ t("div", {
 		className: "\r\n          mx-auto\r\n          max-w-7xl\r\n          grid\r\n          grid-cols-1\r\n          gap-8\r\n          px-6\r\n          py-10\r\n          md:grid-cols-3\r\n        ",
 		children: e
 	})
-}), f = ({ copyright: e }) => /* @__PURE__ */ t("div", {
-	className: "\r\n        bg-gray\r\n        text-light-gray\r\n\r\n        border-t\r\n        border-gray\r\n\r\n        py-4\r\n\r\n        text-center\r\n        text-sm\r\n      ",
+}), f = ({ copyright: e, footerBottomClassName: n = "" }) => /* @__PURE__ */ t("div", {
+	className: `
+        border-t
+        
+        py-4
+
+        text-center
+       
+        ${n || "text-light-gray bg-gray border-gray text-sm"}
+      `,
 	children: e
 }), p = ({ email: e, phone: r, socials: i }) => /* @__PURE__ */ n("div", {
 	className: "text-white",
@@ -103,7 +120,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		children: e
 	})
 }), _ = ({ children: e, style: n }) => /* @__PURE__ */ t("header", {
-	className: `w-full bg-white border-b border-light-gray shadow-sm ${n}`,
+	className: `w-full border-b border-light-gray shadow-sm ${n || "bg-white"}`,
 	children: /* @__PURE__ */ t("div", {
 		className: "relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0",
 		children: e
@@ -175,7 +192,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			})]
 		})
 	] });
-}, y = ({ logo: e = "/logo.svg", title: r = "my Company", style: i, alt: a = "" }) => /* @__PURE__ */ n("div", {
+}, y = ({ logo: e = "/logo.svg", title: r = "my Company", style: i, alt: a = "", titleClassName: o = "" }) => /* @__PURE__ */ n("div", {
 	className: `
         flex
         items-center
@@ -191,13 +208,19 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	children: [/* @__PURE__ */ t("img", {
 		src: e,
 		alt: a,
-		className: "\r\n          h-8\r\n          w-8\r\n          sm:h-10\r\n          sm:w-10\r\n          object-contain\r\n          shrink-0\r\n        "
+		className: "\r\n          h-8\r\n          w-8\r\n          sm:h-10\r\n          sm:w-10\r\n         object-cover\r\n          rounded-full\r\n          shrink-0\r\n        "
 	}), /* @__PURE__ */ t("h1", {
-		className: "\r\n          text-sm\r\n          sm:text-lg\r\n          font-bold\r\n          text-blue\r\n          truncate\r\n        ",
+		className: `
+          text-sm
+          sm:text-lg
+          font-bold
+          truncate
+          ${o || "text-white"}
+        `,
 		title: r,
 		children: r
 	})]
-}), b = ({ navBar: e = [], style: n, onItemClick: r }) => /* @__PURE__ */ t("nav", {
+}), b = ({ navBar: e = [], style: n, onItemClick: r, navLabelClassName: i = "text-black" }) => /* @__PURE__ */ t("nav", {
 	className: `
         hidden
         md:flex
@@ -219,7 +242,13 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	children: e.map((e) => /* @__PURE__ */ t("a", {
 		href: e.href || "#",
 		onClick: () => r?.(e.label),
-		className: "\r\n            text-base\r\n            lg:text-lg\r\n            font-bold\r\n            text-black\r\n            hover:text-green\r\n            cursor-pointer\r\n          ",
+		className: `
+            text-base
+            lg:text-lg
+            cursor-pointer
+            font-bold
+            
+            ${i || "text-black hover:text-green"}`,
 		children: e.label
 	}, e.id))
 }), x = ({ isOpen: r, onClose: i, title: a, children: o }) => r ? /* @__PURE__ */ n(e, { children: [/* @__PURE__ */ t("div", {
@@ -388,7 +417,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			children: o
 		})
 	]
-}), T = "border-red", E = "text-red", D = "border-gray", O = ({ id: e, labelText: r, placeholder: i, type: a, error: o, helperText: s }) => /* @__PURE__ */ n("div", {
+}), T = "border-red", E = "text-red", D = "border-gray", O = ({ id: e, labelText: r, placeholder: i, type: a, error: o, helperText: s, name: c, value: l, onChange: u }) => /* @__PURE__ */ n("div", {
 	className: "flex flex-col gap-1",
 	children: [
 		/* @__PURE__ */ t("label", {
@@ -398,8 +427,11 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		}),
 		/* @__PURE__ */ t("input", {
 			id: e,
+			name: c ?? e,
 			placeholder: i,
 			type: a,
+			value: l,
+			onChange: u,
 			className: `block w-full px-3 py-2.5 bg-neutral-secondary-medium border ${o ? T : D} text-heading text-sm rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`
 		}),
 		s && /* @__PURE__ */ t("p", {
@@ -407,7 +439,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			children: s
 		})
 	]
-}), k = ({ id: e, title: r, children: i, style: a }) => /* @__PURE__ */ t("section", {
+}), k = ({ id: e, title: r, children: i, style: a = "", sectionTitleClassName: o = "text-black" }) => /* @__PURE__ */ t("section", {
 	id: e,
 	className: `
         min-h-screen
@@ -423,14 +455,26 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	children: /* @__PURE__ */ n("div", {
 		className: "mx-auto flex w-full max-w-7xl flex-col gap-10",
 		children: [r && /* @__PURE__ */ t("h2", {
-			className: "\r\n              text-3xl\r\n              font-bold\r\n              md:text-4xl\r\n            ",
+			className: `
+              text-3xl
+              font-bold
+              md:text-4xl
+              ${o || "text-black"}
+            `,
 			children: r
 		}), i]
 	})
-}), A = ({ items: e }) => /* @__PURE__ */ t("nav", {
+}), A = ({ items: e, breadcrumbTextClassName: r }) => /* @__PURE__ */ t("nav", {
 	"aria-label": "Breadcrumb",
 	children: /* @__PURE__ */ t("ol", {
-		className: "\r\n          flex\r\n          flex-wrap\r\n          items-center\r\n          gap-2\r\n          text-sm\r\n          text-light-black\r\n        ",
+		className: `
+          flex
+          flex-wrap
+          items-center
+          gap-2
+          text-sm
+          ${r || "text-light-black"}
+        `,
 		children: e.map((r, i) => {
 			let a = i === e.length - 1;
 			return /* @__PURE__ */ n("li", {
@@ -449,62 +493,77 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			}, r.id);
 		})
 	})
-}), j = ({ children: e, navItems: i, logo: a, companyTitle: o, description: s = "", email: c = "", phone: l = "", socials: u = [] }) => {
-	let [g, x] = r.useState(i[0]?.label || "Home");
+}), j = ({ children: e, navItems: i, logo: a, companyTitle: o, description: s = "", email: c = "", phone: l = "", socials: u = [], copyright: g = "", headerClassName: x = "bg-white", companyTitleClassName: C = "", breadcrumbClassName: w = "bg-light-gray", footerClassName: T = "", footerBottomClassName: E = "", breadcrumbTextClassName: D = "", navLabelClassName: O = "" }) => {
+	let [k, j] = r.useState(i[0]?.label || "Home");
 	return /* @__PURE__ */ n("div", {
 		className: "w-full scroll-smooth",
 		children: [
 			/* @__PURE__ */ t("div", {
-				className: "sticky top-0 z-50 bg-white",
-				children: /* @__PURE__ */ n(_, { children: [/* @__PURE__ */ n("div", {
-					className: "flex items-center gap-4 lg:gap-10",
-					children: [/* @__PURE__ */ t(y, {
-						logo: a || "",
-						title: o || "Company Name"
-					}), /* @__PURE__ */ t(b, {
-						navBar: i,
-						onItemClick: x
+				className: "sticky top-0 z-50",
+				children: /* @__PURE__ */ n(_, {
+					style: x,
+					children: [/* @__PURE__ */ n("div", {
+						className: "flex items-center gap-4 lg:gap-10",
+						children: [/* @__PURE__ */ t(y, {
+							logo: a || "",
+							title: o || "Company Name",
+							titleClassName: C
+						}), /* @__PURE__ */ t(b, {
+							navBar: i,
+							onItemClick: j,
+							navLabelClassName: O
+						})]
+					}), /* @__PURE__ */ n("div", {
+						className: "flex shrink-0 items-center gap-2 sm:gap-3",
+						children: [/* @__PURE__ */ t(S, {}), /* @__PURE__ */ t(v, {
+							navDrawer: i,
+							onItemClick: j
+						})]
 					})]
-				}), /* @__PURE__ */ n("div", {
-					className: "flex shrink-0 items-center gap-2 sm:gap-3",
-					children: [/* @__PURE__ */ t(S, {}), /* @__PURE__ */ t(v, {
-						navDrawer: i,
-						onItemClick: x
-					})]
-				})] })
+				})
 			}),
 			/* @__PURE__ */ t("div", {
-				className: " \r\n            mx-auto\r\n            max-w-full\r\n            px-6\r\n            py-4\r\n            sticky\r\n            z-40\r\n            top-16\r\n            bg-light-gray",
-				children: /* @__PURE__ */ t(A, { items: [{
-					id: 1,
-					label: g,
-					href: "#"
-				}] })
+				className: `mx-auto max-w-full px-6 py-4 sticky z-40 top-16 ${w || "bg-light-gray"}`,
+				children: /* @__PURE__ */ t(A, {
+					items: [{
+						id: 1,
+						label: k,
+						href: "#"
+					}],
+					breadcrumbTextClassName: D
+				})
 			}),
 			e,
-			/* @__PURE__ */ n(d, { children: [
-				/* @__PURE__ */ t(m, {
-					description: s,
-					children: /* @__PURE__ */ t("div", {
-						className: "scale-150 origin-left",
-						children: /* @__PURE__ */ t(y, {
-							logo: a || "",
-							title: o || "Company Name"
+			/* @__PURE__ */ n(d, {
+				className: T,
+				children: [
+					/* @__PURE__ */ t(m, {
+						description: s,
+						children: /* @__PURE__ */ t("div", {
+							className: "scale-150 origin-left",
+							children: /* @__PURE__ */ t(y, {
+								logo: a || "",
+								title: o || "Company Name",
+								titleClassName: C
+							})
 						})
+					}),
+					/* @__PURE__ */ t(h, {
+						title: "Quick Links",
+						links: i,
+						onItemClick: j
+					}),
+					/* @__PURE__ */ t(p, {
+						email: c,
+						phone: l,
+						socials: u
+					}),
+					/* @__PURE__ */ t(f, {
+						copyright: g || " ",
+						footerBottomClassName: E
 					})
-				}),
-				/* @__PURE__ */ t(h, {
-					title: "Quick Links",
-					links: i,
-					onItemClick: x
-				}),
-				/* @__PURE__ */ t(p, {
-					email: c,
-					phone: l,
-					socials: u
-				}),
-				/* @__PURE__ */ t(f, { copyright: "© 2026 QTEK. All rights reserved." })
-			] })
+				]
+			})
 		]
 	});
 }, M = ({ children: e, style: n, maxRows: r = 5 }) => /* @__PURE__ */ t("div", {

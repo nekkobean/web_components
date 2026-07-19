@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# @eloisallena/web_components
 
-## Getting Started
+A React component library built with Next.js, TypeScript, and Tailwind CSS, published to npm. Created as an internship mini task. Provides a set of reusable, theme-aware UI components — buttons, forms, cards, tables, modals, navigation, and layout primitives — for building consistent interfaces across projects.
 
-First, run the development server:
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install @eloisallena/web_components@latest
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Peer dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This package expects the following to already be installed in your project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install next@^16.2.4 react@19.2.4 react-dom@19.2.4
+```
 
-## Learn More
+## Setup
 
-To learn more about Next.js, take a look at the following resources:
+Import the component styles once, typically in your root layout:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```tsx
+import "@eloisallena/web_components/style.css";
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+Import components directly from the package:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```tsx
+import {
+  Button,
+  Cform,
+  Ctable,
+  Modal,
+  Select,
+  TableBody,
+  TableCell,
+  TableHead,
+  TextField,
+} from "@eloisallena/web_components";
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Example — Section with cards
+
+```tsx
+<Section id="about" title="About">
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <Card>
+      <CardContent title="Card One" description="Some description text." />
+    </Card>
+    <Card>
+      <CardContent title="Card Two" description="Some description text." />
+    </Card>
+    <Card>
+      <CardContent title="Card Three" description="Some description text." />
+    </Card>
+  </div>
+</Section>
+```
+
+## Components
+
+| Component | Description |
+|---|---|
+| `Button` | Configurable button with `primary`, `secondary`, `restore`, `delete`, and `disabled` variants; supports loading state |
+| `Card` / `CardContent` / `CardFooter` / `CardImage` | Card container and its content/footer/image building blocks |
+| `Cform` | Styled form wrapper |
+| `CheckBox` | Checkbox input with label and helper text |
+| `Ctable` / `TableHead` / `TableBody` / `TableRow` / `TableCell` | Table components for displaying tabular data with a scrollable, capped-height container |
+| `Select` | Styled select dropdown |
+| `TextField` | Styled text input with label and helper text |
+| `Modal` | Overlay dialog with title and close button |
+| `Section` | Full-width page section wrapper with optional title |
+| `Breadcrumbs` | Breadcrumb navigation trail |
+| `NavBar` / `Drawer` | Desktop navigation bar and mobile navigation drawer |
+| `Icon` | Logo/brand icon with title |
+| `SearchBar` | Search input with mobile modal fallback |
+| `Cheader` / `Cfooter` / `FooterBottom` / `FooterContact` / `FooterIcon` / `QuickLink` | Header and footer building blocks |
+| `LandingLayout` | Full page layout combining header, nav, breadcrumb, content, and footer |
+| `Loader` | Small loading spinner |
+
+## Tech Stack
+
+- React 19 / Next.js 16
+- TypeScript
+- Tailwind CSS v4
+- Vitest + Playwright (testing)
+- Vite (library build)

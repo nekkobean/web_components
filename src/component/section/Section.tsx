@@ -6,6 +6,8 @@ export interface SectionProps {
   title?: string;
   children?: React.ReactNode;
   style?: string;
+  sectionTitleClassName?: string;
+
   
 }
 
@@ -13,7 +15,8 @@ export const Section: React.FC<SectionProps> = ({
   id,
   title,
   children,
-  style,
+  style = "",
+  sectionTitleClassName="text-black"
 }) => {
   return (
     <section
@@ -33,11 +36,12 @@ export const Section: React.FC<SectionProps> = ({
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-10">
         {title && (
           <h2
-            className="
+            className={`
               text-3xl
               font-bold
               md:text-4xl
-            "
+              ${sectionTitleClassName || "text-black"}
+            `}
           >
             {title}
           </h2>

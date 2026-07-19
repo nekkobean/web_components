@@ -1,8 +1,12 @@
-Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=Object.getOwnPropertyNames,i=Object.getPrototypeOf,a=Object.prototype.hasOwnProperty,o=(e,i,o,s)=>{if(i&&typeof i==`object`||typeof i==`function`)for(var c=r(i),l=0,u=c.length,d;l<u;l++)d=c[l],!a.call(e,d)&&d!==o&&t(e,d,{get:(e=>i[e]).bind(null,d),enumerable:!(s=n(i,d))||s.enumerable});return e},s=(n,r,a)=>(a=n==null?{}:e(i(n)),o(r||!n||!n.__esModule?t(a,`default`,{value:n,enumerable:!0}):a,n));let c=require(`react/jsx-runtime`),l=require(`react`);l=s(l,1);var u=()=>(0,c.jsx)(`span`,{className:`animate-spin rounded-full h-4 w-4 border-b-2 border-white`}),d=({variant:e=`primary`,label:t,isLoading:n=!1,disabled:r=!1,onClick:i,style:a})=>{let o={primary:`bg-primary-button text-primary`,secondary:`bg-secondary-button text-primary`,restore:`bg-restore-button text-primary`,delete:`bg-delete-button text-primary`,disabled:`bg-disabled-button text-primary`},s=n?(0,c.jsx)(u,{}):null,l=r||n;return(0,c.jsx)(`div`,{className:`w-full md:w-auto`,children:(0,c.jsxs)(`button`,{className:`${o[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
-       ${l?`cursor-not-allowed opacity-50`:`hover:cursor-pointer`} ${a||``}`,disabled:l,onClick:i,children:[s,t]})})},f=({children:e})=>(0,c.jsx)(`div`,{className:`bg-primary w-full max-w-sm rounded-lg shadow-md overflow-hidden`,children:e}),p=({title:e,description:t,titleClassName:n,descriptionClassName:r})=>(0,c.jsxs)(`div`,{className:`p-10`,children:[(0,c.jsx)(`h2`,{className:`text-lg font-bold mb-2 text-black whitespace-pre-line ${n||``}`,children:e}),(0,c.jsx)(`p`,{className:`text-gray text-sm font-normal whitespace-pre-line ${r||``}`,children:t})]}),m=({children:e})=>(0,c.jsx)(`div`,{className:`flex justify-end gap-4 w-full p-4`,children:e}),h=({alt:e,image:t,children:n})=>(0,c.jsxs)(`div`,{className:`relative w-full h-48`,children:[(0,c.jsx)(`img`,{src:t,alt:e,className:`w-full h-full object-cover`}),n]}),g=({children:e})=>(0,c.jsx)(`footer`,{className:`\r
-        w-full\r
-        bg-gray\r
-        text-white\r
+Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=Object.getOwnPropertyNames,i=Object.getPrototypeOf,a=Object.prototype.hasOwnProperty,o=(e,i,o,s)=>{if(i&&typeof i==`object`||typeof i==`function`)for(var c=r(i),l=0,u=c.length,d;l<u;l++)d=c[l],!a.call(e,d)&&d!==o&&t(e,d,{get:(e=>i[e]).bind(null,d),enumerable:!(s=n(i,d))||s.enumerable});return e},s=(n,r,a)=>(a=n==null?{}:e(i(n)),o(r||!n||!n.__esModule?t(a,`default`,{value:n,enumerable:!0}):a,n));let c=require(`react/jsx-runtime`),l=require(`react`);l=s(l,1);var u=()=>(0,c.jsx)(`span`,{className:`animate-spin rounded-full h-4 w-4 border-b-2 border-white`}),d=({variant:e=`primary`,label:t,isLoading:n=!1,disabled:r=!1,onClick:i,style:a,type:o=`button`})=>{let s={primary:`bg-primary-button text-primary`,secondary:`bg-secondary-button text-primary`,restore:`bg-restore-button text-primary`,delete:`bg-delete-button text-primary`,disabled:`bg-disabled-button text-primary`},l=n?(0,c.jsx)(u,{}):null,d=r||n;return(0,c.jsx)(`div`,{className:`w-full md:w-auto`,children:(0,c.jsxs)(`button`,{type:o,className:`${a||s[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
+   ${d?`cursor-not-allowed opacity-50`:`hover:cursor-pointer`}`,disabled:d,onClick:i,children:[l,t]})})},f=({children:e,style:t})=>(0,c.jsx)(`div`,{className:`
+        w-full max-w-sm rounded-lg shadow-md overflow-hidden
+       
+        ${t||`bg-primary`}
+      `,children:e}),p=({title:e,description:t,titleClassName:n,descriptionClassName:r})=>(0,c.jsxs)(`div`,{className:`p-10`,children:[(0,c.jsx)(`h2`,{className:`text-lg font-bold mb-2 text-black whitespace-pre-line ${n||``}`,children:e}),(0,c.jsx)(`p`,{className:`text-gray text-sm font-normal whitespace-pre-line ${r||``}`,children:t})]}),m=({children:e})=>(0,c.jsx)(`div`,{className:`flex justify-end gap-4 w-full p-4`,children:e}),h=({alt:e,image:t,children:n})=>(0,c.jsxs)(`div`,{className:`relative w-full h-48`,children:[(0,c.jsx)(`img`,{src:t,alt:e,className:`w-full h-full object-cover`}),n]}),g=({children:e,className:t})=>(0,c.jsx)(`footer`,{className:`
+        w-full
+        text-white
+        ${t||`bg-gray`}
       `,children:(0,c.jsx)(`div`,{className:`\r
           mx-auto\r
           max-w-7xl\r
@@ -12,17 +16,14 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
           px-6\r
           py-10\r
           md:grid-cols-3\r
-        `,children:e})}),_=({copyright:e})=>(0,c.jsx)(`div`,{className:`\r
-        bg-gray\r
-        text-light-gray\r
-\r
-        border-t\r
-        border-gray\r
-\r
-        py-4\r
-\r
-        text-center\r
-        text-sm\r
+        `,children:e})}),_=({copyright:e,footerBottomClassName:t=``})=>(0,c.jsx)(`div`,{className:`
+        border-t
+        
+        py-4
+
+        text-center
+       
+        ${t||`text-light-gray bg-gray border-gray text-sm`}
       `,children:e}),v=({email:e,phone:t,socials:n})=>(0,c.jsxs)(`div`,{className:`text-white`,children:[(0,c.jsx)(`h3`,{className:`\r
           mb-3\r
           text-lg\r
@@ -39,7 +40,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
           mb-3\r
           text-lg\r
           font-semibold\r
-        `,children:e}),(0,c.jsx)(`div`,{className:`flex flex-col gap-2`,children:t.map(e=>(0,c.jsx)(`a`,{href:e.href,onClick:()=>n?.(e.label),className:`hover:underline`,children:e.label},e.id))})]}),x=({children:e,onSubmit:t,className:n=``,...r})=>(0,c.jsx)(`form`,{onSubmit:t,className:`w-full max-w-sm ${n}`,...r,children:(0,c.jsx)(`div`,{className:`flex flex-col gap-1`,children:e})}),S=({children:e,style:t})=>(0,c.jsx)(`header`,{className:`w-full bg-white border-b border-light-gray shadow-sm ${t}`,children:(0,c.jsx)(`div`,{className:`relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0`,children:e})}),C=({navDrawer:e=[],style:t,onItemClick:n})=>{let[r,i]=(0,l.useState)(!1);return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(`button`,{onClick:()=>i(!0),className:`\r
+        `,children:e}),(0,c.jsx)(`div`,{className:`flex flex-col gap-2`,children:t.map(e=>(0,c.jsx)(`a`,{href:e.href,onClick:()=>n?.(e.label),className:`hover:underline`,children:e.label},e.id))})]}),x=({children:e,onSubmit:t,className:n=``,...r})=>(0,c.jsx)(`form`,{onSubmit:t,className:`w-full max-w-sm ${n}`,...r,children:(0,c.jsx)(`div`,{className:`flex flex-col gap-1`,children:e})}),S=({children:e,style:t})=>(0,c.jsx)(`header`,{className:`w-full border-b border-light-gray shadow-sm ${t||`bg-white`}`,children:(0,c.jsx)(`div`,{className:`relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0`,children:e})}),C=({navDrawer:e=[],style:t,onItemClick:n})=>{let[r,i]=(0,l.useState)(!1);return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(`button`,{onClick:()=>i(!0),className:`\r
           shrink-0\r
           flex\r
           md:hidden\r
@@ -89,7 +90,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
                 py-3\r
                 hover:bg-light-gray\r
                 text-black\r
-              `,children:e.label},e.id))})]})]})},w=({logo:e=`/logo.svg`,title:t=`my Company`,style:n,alt:r=``})=>(0,c.jsxs)(`div`,{className:`
+              `,children:e.label},e.id))})]})]})},w=({logo:e=`/logo.svg`,title:t=`my Company`,style:n,alt:r=``,titleClassName:i=``})=>(0,c.jsxs)(`div`,{className:`
         flex
         items-center
         gap-2
@@ -105,15 +106,16 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
           w-8\r
           sm:h-10\r
           sm:w-10\r
-          object-contain\r
+         object-cover\r
+          rounded-full\r
           shrink-0\r
-        `}),(0,c.jsx)(`h1`,{className:`\r
-          text-sm\r
-          sm:text-lg\r
-          font-bold\r
-          text-blue\r
-          truncate\r
-        `,title:t,children:t})]}),T=({navBar:e=[],style:t,onItemClick:n})=>(0,c.jsx)(`nav`,{className:`
+        `}),(0,c.jsx)(`h1`,{className:`
+          text-sm
+          sm:text-lg
+          font-bold
+          truncate
+          ${i||`text-white`}
+        `,title:t,children:t})]}),T=({navBar:e=[],style:t,onItemClick:n,navLabelClassName:r=`text-black`})=>(0,c.jsx)(`nav`,{className:`
         hidden
         md:flex
         flex-1
@@ -130,14 +132,13 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
         overflow-x-auto
         whitespace-nowrap
         ${t||``}
-      `,children:e.map(e=>(0,c.jsx)(`a`,{href:e.href||`#`,onClick:()=>n?.(e.label),className:`\r
-            text-base\r
-            lg:text-lg\r
-            font-bold\r
-            text-black\r
-            hover:text-green\r
-            cursor-pointer\r
-          `,children:e.label},e.id))}),E=({isOpen:e,onClose:t,title:n,children:r})=>e?(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(`div`,{className:`fixed inset-0 z-40 bg-black/40`,onClick:t}),(0,c.jsx)(`div`,{className:`fixed inset-0 z-50 flex items-center justify-center p-4`,children:(0,c.jsxs)(`div`,{className:`w-full max-w-md bg-white shadow-lg`,role:`dialog`,"aria-modal":`true`,children:[(0,c.jsxs)(`div`,{className:`flex items-center justify-between border-b border-gray-200 px-5 py-4`,children:[(0,c.jsx)(`h2`,{className:`text-lg font-semibold`,children:n}),(0,c.jsx)(`button`,{onClick:t,className:`flex h-10 w-10 items-center justify-center hover:bg-gray-100 rounded-md`,"aria-label":`Close modal`,children:(0,c.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,strokeWidth:2,stroke:`currentColor`,className:`h-5 w-5`,children:(0,c.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M6 18L18 6M6 6l12 12`})})})]}),(0,c.jsx)(`div`,{className:`p-5`,children:r})]})})]}):null,D=({placeholder:e=`Search...`,style:t,children:n})=>{let[r,i]=(0,l.useState)(!1);return(0,c.jsxs)(`div`,{className:`relative shrink-0 ${t||``}`,children:[(0,c.jsxs)(`div`,{className:`hidden md:block relative`,children:[(0,c.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,stroke:`currentColor`,strokeWidth:2,className:`\r
+      `,children:e.map(e=>(0,c.jsx)(`a`,{href:e.href||`#`,onClick:()=>n?.(e.label),className:`
+            text-base
+            lg:text-lg
+            cursor-pointer
+            font-bold
+            
+            ${r||`text-black hover:text-green`}`,children:e.label},e.id))}),E=({isOpen:e,onClose:t,title:n,children:r})=>e?(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(`div`,{className:`fixed inset-0 z-40 bg-black/40`,onClick:t}),(0,c.jsx)(`div`,{className:`fixed inset-0 z-50 flex items-center justify-center p-4`,children:(0,c.jsxs)(`div`,{className:`w-full max-w-md bg-white shadow-lg`,role:`dialog`,"aria-modal":`true`,children:[(0,c.jsxs)(`div`,{className:`flex items-center justify-between border-b border-gray-200 px-5 py-4`,children:[(0,c.jsx)(`h2`,{className:`text-lg font-semibold`,children:n}),(0,c.jsx)(`button`,{onClick:t,className:`flex h-10 w-10 items-center justify-center hover:bg-gray-100 rounded-md`,"aria-label":`Close modal`,children:(0,c.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,strokeWidth:2,stroke:`currentColor`,className:`h-5 w-5`,children:(0,c.jsx)(`path`,{strokeLinecap:`round`,strokeLinejoin:`round`,d:`M6 18L18 6M6 6l12 12`})})})]}),(0,c.jsx)(`div`,{className:`p-5`,children:r})]})})]}):null,D=({placeholder:e=`Search...`,style:t,children:n})=>{let[r,i]=(0,l.useState)(!1);return(0,c.jsxs)(`div`,{className:`relative shrink-0 ${t||``}`,children:[(0,c.jsxs)(`div`,{className:`hidden md:block relative`,children:[(0,c.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,fill:`none`,viewBox:`0 0 24 24`,stroke:`currentColor`,strokeWidth:2,className:`\r
             absolute\r
             left-3\r
             top-1/2\r
@@ -199,7 +200,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
                 focus:outline-none\r
                 focus:ring-2\r
                 focus:ring-blue\r
-              `})]})})]})},O=({id:e,label:t,required:n,disabled:r,defaultChecked:i,error:a,helperText:o,onChange:s})=>{let[u,d]=(0,l.useState)(i||!1);return(0,c.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,c.jsx)(`input`,{id:e,type:`checkbox`,checked:u,onChange:e=>{let t=e.target.checked;d(t),s?.(t)},disabled:r,className:`w-4 h-4 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${r?`border-light cursor-not-allowed`:`border-default-medium hover:cursor-pointer`}`}),(0,c.jsxs)(`label`,{htmlFor:e,className:`select-none ms-2 text-sm font-medium ${r?`text-light-gray`:`text-heading`}`,children:[t,` `,n&&(0,c.jsx)(`span`,{className:`text-red`,children:`*`})]})]}),o&&(0,c.jsx)(`div`,{className:`text-sm font-medium ${a?`text-red`:`text-gray`}`,children:o})]})},k=({label:e,options:t,required:n,disabled:r,helperText:i,error:a,value:o,onChange:s})=>(0,c.jsxs)(`div`,{className:`w-full flex flex-col gap-1`,children:[(0,c.jsxs)(`label`,{className:`text-sm font-medium text-gray`,children:[e,` `,n&&`*`]}),(0,c.jsx)(`select`,{className:`h-10 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs focus:ring-brand focus:border-brand ${r?`cursor-not-allowed`:`hover:cursor-pointer`}`,disabled:r,value:o,onChange:e=>s?.(e.target.value),children:t.map(e=>(0,c.jsx)(`option`,{value:e.name,children:e.value},e.key))}),i&&a&&(0,c.jsx)(`div`,{className:`text-red text-sm font-normal`,children:i})]}),A=`border-red`,j=`text-red`,M=`border-gray`,N=({id:e,labelText:t,placeholder:n,type:r,error:i,helperText:a})=>(0,c.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,c.jsx)(`label`,{htmlFor:e,className:`text-sm font-medium text-gray`,children:t}),(0,c.jsx)(`input`,{id:e,placeholder:n,type:r,className:`block w-full px-3 py-2.5 bg-neutral-secondary-medium border ${i?A:M} text-heading text-sm rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`}),a&&(0,c.jsx)(`p`,{className:`${i?j:`text-light-gray`} text-xs`,children:a})]}),P=({id:e,title:t,children:n,style:r})=>(0,c.jsx)(`section`,{id:e,className:`
+              `})]})})]})},O=({id:e,label:t,required:n,disabled:r,defaultChecked:i,error:a,helperText:o,onChange:s})=>{let[u,d]=(0,l.useState)(i||!1);return(0,c.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,c.jsx)(`input`,{id:e,type:`checkbox`,checked:u,onChange:e=>{let t=e.target.checked;d(t),s?.(t)},disabled:r,className:`w-4 h-4 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${r?`border-light cursor-not-allowed`:`border-default-medium hover:cursor-pointer`}`}),(0,c.jsxs)(`label`,{htmlFor:e,className:`select-none ms-2 text-sm font-medium ${r?`text-light-gray`:`text-heading`}`,children:[t,` `,n&&(0,c.jsx)(`span`,{className:`text-red`,children:`*`})]})]}),o&&(0,c.jsx)(`div`,{className:`text-sm font-medium ${a?`text-red`:`text-gray`}`,children:o})]})},k=({label:e,options:t,required:n,disabled:r,helperText:i,error:a,value:o,onChange:s})=>(0,c.jsxs)(`div`,{className:`w-full flex flex-col gap-1`,children:[(0,c.jsxs)(`label`,{className:`text-sm font-medium text-gray`,children:[e,` `,n&&`*`]}),(0,c.jsx)(`select`,{className:`h-10 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs focus:ring-brand focus:border-brand ${r?`cursor-not-allowed`:`hover:cursor-pointer`}`,disabled:r,value:o,onChange:e=>s?.(e.target.value),children:t.map(e=>(0,c.jsx)(`option`,{value:e.name,children:e.value},e.key))}),i&&a&&(0,c.jsx)(`div`,{className:`text-red text-sm font-normal`,children:i})]}),A=`border-red`,j=`text-red`,M=`border-gray`,N=({id:e,labelText:t,placeholder:n,type:r,error:i,helperText:a,name:o,value:s,onChange:l})=>(0,c.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,c.jsx)(`label`,{htmlFor:e,className:`text-sm font-medium text-gray`,children:t}),(0,c.jsx)(`input`,{id:e,name:o??e,placeholder:n,type:r,value:s,onChange:l,className:`block w-full px-3 py-2.5 bg-neutral-secondary-medium border ${i?A:M} text-heading text-sm rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`}),a&&(0,c.jsx)(`p`,{className:`${i?j:`text-light-gray`} text-xs`,children:a})]}),P=({id:e,title:t,children:n,style:r=``,sectionTitleClassName:i=`text-black`})=>(0,c.jsx)(`section`,{id:e,className:`
         min-h-screen
         w-full
         px-6
@@ -209,17 +210,18 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
         lg:px-16
 
         ${r||``}
-      `,children:(0,c.jsxs)(`div`,{className:`mx-auto flex w-full max-w-7xl flex-col gap-10`,children:[t&&(0,c.jsx)(`h2`,{className:`\r
-              text-3xl\r
-              font-bold\r
-              md:text-4xl\r
-            `,children:t}),n]})}),F=({items:e})=>(0,c.jsx)(`nav`,{"aria-label":`Breadcrumb`,children:(0,c.jsx)(`ol`,{className:`\r
-          flex\r
-          flex-wrap\r
-          items-center\r
-          gap-2\r
-          text-sm\r
-          text-light-black\r
+      `,children:(0,c.jsxs)(`div`,{className:`mx-auto flex w-full max-w-7xl flex-col gap-10`,children:[t&&(0,c.jsx)(`h2`,{className:`
+              text-3xl
+              font-bold
+              md:text-4xl
+              ${i||`text-black`}
+            `,children:t}),n]})}),F=({items:e,breadcrumbTextClassName:t})=>(0,c.jsx)(`nav`,{"aria-label":`Breadcrumb`,children:(0,c.jsx)(`ol`,{className:`
+          flex
+          flex-wrap
+          items-center
+          gap-2
+          text-sm
+          ${t||`text-light-black`}
         `,children:e.map((t,n)=>{let r=n===e.length-1;return(0,c.jsxs)(`li`,{className:`\r
                 flex\r
                 items-center\r
@@ -232,15 +234,7 @@ Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});var e=Object.
                     transition-colors\r
                     hover:text-blue-600\r
                     hover:underline\r
-                  `,children:t.label}),!r&&(0,c.jsx)(`span`,{className:`text-light-black`,children:`>`})]},t.id)})})}),I=({children:e,navItems:t,logo:n,companyTitle:r,description:i=``,email:a=``,phone:o=``,socials:s=[]})=>{let[u,d]=l.default.useState(t[0]?.label||`Home`);return(0,c.jsxs)(`div`,{className:`w-full scroll-smooth`,children:[(0,c.jsx)(`div`,{className:`sticky top-0 z-50 bg-white`,children:(0,c.jsxs)(S,{children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-4 lg:gap-10`,children:[(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`}),(0,c.jsx)(T,{navBar:t,onItemClick:d})]}),(0,c.jsxs)(`div`,{className:`flex shrink-0 items-center gap-2 sm:gap-3`,children:[(0,c.jsx)(D,{}),(0,c.jsx)(C,{navDrawer:t,onItemClick:d})]})]})}),(0,c.jsx)(`div`,{className:` \r
-            mx-auto\r
-            max-w-full\r
-            px-6\r
-            py-4\r
-            sticky\r
-            z-40\r
-            top-16\r
-            bg-light-gray`,children:(0,c.jsx)(F,{items:[{id:1,label:u,href:`#`}]})}),e,(0,c.jsxs)(g,{children:[(0,c.jsx)(y,{description:i,children:(0,c.jsx)(`div`,{className:`scale-150 origin-left`,children:(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`})})}),(0,c.jsx)(b,{title:`Quick Links`,links:t,onItemClick:d}),(0,c.jsx)(v,{email:a,phone:o,socials:s}),(0,c.jsx)(_,{copyright:`© 2026 QTEK. All rights reserved.`})]})]})},L=({children:e,style:t,maxRows:n=5})=>(0,c.jsx)(`div`,{className:`
+                  `,children:t.label}),!r&&(0,c.jsx)(`span`,{className:`text-light-black`,children:`>`})]},t.id)})})}),I=({children:e,navItems:t,logo:n,companyTitle:r,description:i=``,email:a=``,phone:o=``,socials:s=[],copyright:u=``,headerClassName:d=`bg-white`,companyTitleClassName:f=``,breadcrumbClassName:p=`bg-light-gray`,footerClassName:m=``,footerBottomClassName:h=``,breadcrumbTextClassName:x=``,navLabelClassName:E=``})=>{let[O,k]=l.default.useState(t[0]?.label||`Home`);return(0,c.jsxs)(`div`,{className:`w-full scroll-smooth`,children:[(0,c.jsx)(`div`,{className:`sticky top-0 z-50`,children:(0,c.jsxs)(S,{style:d,children:[(0,c.jsxs)(`div`,{className:`flex items-center gap-4 lg:gap-10`,children:[(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`,titleClassName:f}),(0,c.jsx)(T,{navBar:t,onItemClick:k,navLabelClassName:E})]}),(0,c.jsxs)(`div`,{className:`flex shrink-0 items-center gap-2 sm:gap-3`,children:[(0,c.jsx)(D,{}),(0,c.jsx)(C,{navDrawer:t,onItemClick:k})]})]})}),(0,c.jsx)(`div`,{className:`mx-auto max-w-full px-6 py-4 sticky z-40 top-16 ${p||`bg-light-gray`}`,children:(0,c.jsx)(F,{items:[{id:1,label:O,href:`#`}],breadcrumbTextClassName:x})}),e,(0,c.jsxs)(g,{className:m,children:[(0,c.jsx)(y,{description:i,children:(0,c.jsx)(`div`,{className:`scale-150 origin-left`,children:(0,c.jsx)(w,{logo:n||``,title:r||`Company Name`,titleClassName:f})})}),(0,c.jsx)(b,{title:`Quick Links`,links:t,onItemClick:k}),(0,c.jsx)(v,{email:a,phone:o,socials:s}),(0,c.jsx)(_,{copyright:u||` `,footerBottomClassName:h})]})]})},L=({children:e,style:t,maxRows:n=5})=>(0,c.jsx)(`div`,{className:`
         w-full
         overflow-hidden
         rounded-md

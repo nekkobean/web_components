@@ -1,22 +1,24 @@
 import "../../themes/tailwind.css";
 export interface BreadcrumbsProps {
   items: { id: number; label: string; href: string }[];
+  breadcrumbTextClassName?: string;
 }
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   items,
+  breadcrumbTextClassName,
 }) => {
   return (
     <nav aria-label="Breadcrumb">
       <ol
-        className="
+        className={`
           flex
           flex-wrap
           items-center
           gap-2
           text-sm
-          text-light-black
-        "
+          ${breadcrumbTextClassName || "text-light-black"}
+        `}
       >
         {items.map((item, index) => {
           const isLast =

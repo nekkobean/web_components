@@ -3,16 +3,17 @@ import "../../themes/tailwind.css";
 
 export interface CfooterProps {
   children?: ReactNode;
+  className?: string;
 }
 
-export const Cfooter = ({ children }: CfooterProps) => {
+export const Cfooter = ({ children, className }: CfooterProps) => {
   return (
     <footer
-      className="
+      className={`
         w-full
-        bg-gray
         text-white
-      "
+        ${className || "bg-gray"}
+      `}
     >
       <div
         className="

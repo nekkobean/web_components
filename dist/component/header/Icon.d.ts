@@ -4,5 +4,6 @@ export interface IconProps {
     title?: string;
     style?: string;
     alt?: string;
+    titleClassName?: string;
 }
 export declare const Icon: React.FC<IconProps>;

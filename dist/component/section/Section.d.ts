@@ -4,5 +4,6 @@ export interface SectionProps {
     title?: string;
     children?: React.ReactNode;
     style?: string;
+    sectionTitleClassName?: string;
 }
 export declare const Section: React.FC<SectionProps>;

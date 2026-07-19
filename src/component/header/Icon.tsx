@@ -6,6 +6,7 @@ export interface IconProps {
   title?: string;
   style?: string;
   alt?: string;
+  titleClassName?: string;
 }
 
 export const Icon: React.FC<IconProps> = ({
@@ -13,6 +14,8 @@ export const Icon: React.FC<IconProps> = ({
   title = "my Company",
   style,
   alt = "",
+  titleClassName = "",
+  
 }) => {
   return (
     <div
@@ -37,18 +40,19 @@ export const Icon: React.FC<IconProps> = ({
           w-8
           sm:h-10
           sm:w-10
-          object-contain
+         object-cover
+          rounded-full
           shrink-0
         "
       />
       <h1
-        className="
+        className={`
           text-sm
           sm:text-lg
           font-bold
-          text-blue
           truncate
-        "
+          ${titleClassName || "text-white"}
+        `}
         title={title}
       >
         {title}

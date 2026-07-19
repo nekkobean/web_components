@@ -35,4 +35,5 @@ export const Ctable: React.FC<CtableProps> = ({
       </div>
     </div>
   );
-};
+}; 
+

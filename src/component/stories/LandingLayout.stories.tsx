@@ -30,8 +30,33 @@ export const FullPage: Story = {
     logo: "icon.svg",
     companyTitle: "Hello my Sunshin Inchjhjhjhjhj",
     description: "A brief description of the company.",
+    copyright: "© 2026 ELOI. All rights reserved.", 
     email: "hello@qtek.com",
     phone: "+63 900 000 0000",
+    headerClassName : "",//bg-blue
+    navLabelClassName : "",//text-red hover:text-gray
+    companyTitleClassName : "",//text-red
+    breadcrumbClassName : "",//bg-blue
+    breadcrumbTextClassName : "",//text-green
+    footerClassName : "",//bg-blue text-green
+    footerBottomClassName : "",//bg-blue text-gray
+    socials: [
+      {
+        id: 1,
+        label: "Facebook",
+        href: "https://facebook.com"
+      },
+      {
+        id: 2,
+        label: "Twitter",
+        href: "https://twitter.com"
+      },
+      {
+        id: 3,
+        label: "Instagram",
+        href: "https://instagram.com"
+      }
+    ],
     navItems: [
       { id: 1, href: "#home", label: "Home" },
       { id: 2, href: "#about", label: "About" },
@@ -44,7 +69,7 @@ export const FullPage: Story = {
       <>
      
 
-        <Section id="home" title="Dashboard" style="bg-gray-100">
+        <Section id="home" title="Dashboard" style="bg-white">
           <div className="flex min-h-[70vh] items-center justify-center rounded-2xl bg-white p-10 shadow-md">
             <div className="max-w-2xl text-center">
               <h1 className="mb-4 text-4xl font-bold md:text-6xl">

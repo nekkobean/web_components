@@ -6,5 +6,8 @@ export interface TextFieldProps {
     error?: boolean;
     helperText?: string;
     type: "text" | "email" | "password" | "number";
+    name?: string;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export declare const TextField: React.FC<TextFieldProps>;
