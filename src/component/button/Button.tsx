@@ -8,7 +8,7 @@ export interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   style?: string;
-  type?: "button" | "submit" | "reset"; // add this
+  type?: "button" | "submit" | "reset";
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   onClick,
   style,
-  type = "button", // default to "button" so it never accidentally submits
+  type = "button",
 }) => {
   const colors = {
     primary: "bg-primary-button text-primary",
@@ -34,12 +34,12 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <div className="w-full md:w-auto">
       <button
-  type={type} 
-  className={`${style || colors[variant]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
-   ${isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`}
-  disabled={isDisabled}
-  onClick={onClick}
->
+        type={type}
+        className={`${colors[variant]} ${style || ""} flex items-center gap-3 px-5 py-2.5 rounded-2xl text-lg md:text-lg lg:text-xl font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
+         ${isDisabled ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`}
+        disabled={isDisabled}
+        onClick={onClick}
+      >
         {loader}
         {label}
       </button>

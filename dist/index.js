@@ -13,8 +13,8 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		className: "w-full md:w-auto",
 		children: /* @__PURE__ */ n("button", {
 			type: l,
-			className: `${c || u[e]} flex items-center gap-3 px-4 py-2 rounded-2xl text-sm font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
-   ${f ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`,
+			className: `${u[e]} ${c || ""} flex items-center gap-3 px-5 py-2.5 rounded-2xl text-lg md:text-lg lg:text-xl font-medium w-full md:w-auto md:max-w-full justify-center whitespace-nowrap
+         ${f ? "cursor-not-allowed opacity-50" : "hover:cursor-pointer"}`,
 			disabled: f,
 			onClick: s,
 			children: [d, r]
@@ -22,18 +22,17 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	});
 }, s = ({ children: e, style: n }) => /* @__PURE__ */ t("div", {
 	className: `
-        w-full max-w-sm rounded-lg shadow-md overflow-hidden
-       
-        ${n || "bg-primary"}
+        rounded-lg shadow-md overflow-hidden
+        ${n || "w-full bg-primary"}
       `,
 	children: e
 }), c = ({ title: e, description: r, titleClassName: i, descriptionClassName: a }) => /* @__PURE__ */ n("div", {
-	className: "p-10",
+	className: "p-6",
 	children: [/* @__PURE__ */ t("h2", {
-		className: `text-lg font-bold mb-2 text-black whitespace-pre-line ${i || ""}`,
+		className: `font-bold mb-2 text-black whitespace-pre-line ${i || "text-lg"}`,
 		children: e
 	}), /* @__PURE__ */ t("p", {
-		className: `text-gray text-sm font-normal whitespace-pre-line ${a || ""}`,
+		className: `text-gray font-normal whitespace-pre-line ${a || "text-sm"}`,
 		children: r
 	})]
 }), l = ({ children: e }) => /* @__PURE__ */ t("div", {
@@ -363,7 +362,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	return /* @__PURE__ */ n("div", {
 		className: "flex flex-col gap-1",
 		children: [/* @__PURE__ */ n("div", {
-			className: "flex items-center gap-2",
+			className: "flex items-start gap-2",
 			children: [/* @__PURE__ */ t("input", {
 				id: e,
 				type: "checkbox",
@@ -373,10 +372,10 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 					f(t), u?.(t);
 				},
 				disabled: o,
-				className: `w-4 h-4 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${o ? "border-light cursor-not-allowed" : "border-default-medium hover:cursor-pointer"}`
+				className: `w-5 h-5 mt-1 shrink-0 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${o ? "border-light cursor-not-allowed" : "border-default-medium hover:cursor-pointer"}`
 			}), /* @__PURE__ */ n("label", {
 				htmlFor: e,
-				className: `select-none ms-2 text-sm font-medium ${o ? "text-light-gray" : "text-heading"}`,
+				className: `select-none text-lg md:text-lg lg:text-xl font-medium ${o ? "text-light-gray" : "text-heading"}`,
 				children: [
 					r,
 					" ",
@@ -387,7 +386,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 				]
 			})]
 		}), l && /* @__PURE__ */ t("div", {
-			className: `text-sm font-medium ${c ? "text-red" : "text-gray"}`,
+			className: `text-sm md:text-base font-medium ${c ? "text-red" : "text-gray"}`,
 			children: l
 		})]
 	});
@@ -395,7 +394,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	className: "w-full flex flex-col gap-1",
 	children: [
 		/* @__PURE__ */ n("label", {
-			className: "text-sm font-medium text-gray",
+			className: "text-lg md:text-lg lg:text-xl font-medium text-gray",
 			children: [
 				e,
 				" ",
@@ -403,7 +402,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			]
 		}),
 		/* @__PURE__ */ t("select", {
-			className: `h-10 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs focus:ring-brand focus:border-brand ${a ? "cursor-not-allowed" : "hover:cursor-pointer"}`,
+			className: `h-12 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-lg md:text-lg lg:text-xl rounded-base shadow-xs focus:ring-brand focus:border-brand ${a ? "cursor-not-allowed" : "hover:cursor-pointer"}`,
 			disabled: a,
 			value: c,
 			onChange: (e) => l?.(e.target.value),
@@ -413,7 +412,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			}, e.key))
 		}),
 		o && s && /* @__PURE__ */ t("div", {
-			className: "text-red text-sm font-normal",
+			className: "text-red text-sm md:text-base font-normal",
 			children: o
 		})
 	]
@@ -422,7 +421,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 	children: [
 		/* @__PURE__ */ t("label", {
 			htmlFor: e,
-			className: "text-sm font-medium text-gray",
+			className: "text-lg md:text-lg lg:text-xl font-medium text-gray",
 			children: r
 		}),
 		/* @__PURE__ */ t("input", {
@@ -432,35 +431,33 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 			type: a,
 			value: l,
 			onChange: u,
-			className: `block w-full px-3 py-2.5 bg-neutral-secondary-medium border ${o ? T : D} text-heading text-sm rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`
+			className: `block w-full px-3 py-3 bg-neutral-secondary-medium border ${o ? T : D} text-heading text-lg md:text-lg lg:text-xl rounded-base shadow-xs placeholder:text-body focus:ring-brand focus:border-brand`
 		}),
 		s && /* @__PURE__ */ t("p", {
-			className: `${o ? E : "text-light-gray"} text-xs`,
+			className: `${o ? E : "text-light-gray"} text-sm md:text-base`,
 			children: s
 		})
 	]
-}), k = ({ id: e, title: r, children: i, style: a = "", sectionTitleClassName: o = "text-black" }) => /* @__PURE__ */ t("section", {
+}), k = ({ id: e, title: r, children: i, style: a = "", sectionTitleClassName: o, fullHeight: s = !1 }) => /* @__PURE__ */ t("section", {
 	id: e,
 	className: `
-        min-h-screen
         w-full
-        px-6
+        px-4
         py-6
-        scroll-mt-32
+        scroll-mt-[80px]
+        sm:px-6
+        sm:py-8
         md:px-10
+        md:py-10
         lg:px-16
-
+        lg:py-12
+        ${s ? "md:min-h-screen" : ""}
         ${a || ""}
       `,
 	children: /* @__PURE__ */ n("div", {
-		className: "mx-auto flex w-full max-w-7xl flex-col gap-10",
+		className: "mx-auto flex w-full max-w-7xl flex-col gap-6 sm:gap-8 md:gap-10",
 		children: [r && /* @__PURE__ */ t("h2", {
-			className: `
-              text-3xl
-              font-bold
-              md:text-4xl
-              ${o || "text-black"}
-            `,
+			className: `font-bold ${o || "text-black text-2xl sm:text-3xl md:text-4xl"}`,
 			children: r
 		}), i]
 	})

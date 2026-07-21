@@ -1,4 +1,3 @@
-
 import React from "react";
 import "../../themes/tailwind.css";
 
@@ -11,9 +10,8 @@ export const Card: React.FC<CardProps> = ({ children, style }) => {
   return (
     <div
       className={`
-        w-full max-w-sm rounded-lg shadow-md overflow-hidden
-       
-        ${style || "bg-primary"}
+        rounded-lg shadow-md overflow-hidden
+        ${style || "w-full bg-primary"}
       `}
     >
       {children}

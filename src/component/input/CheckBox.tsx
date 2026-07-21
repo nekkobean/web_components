@@ -32,14 +32,14 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
 
   return (
     <div className="flex flex-col gap-1">
-      <div className="flex items-center gap-2">
+      <div className="flex items-start gap-2">
         <input
           id={id}
           type="checkbox"
           checked={isChecked}
           onChange={handleChange}
           disabled={disabled}
-          className={`w-4 h-4 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${
+          className={`w-5 h-5 mt-1 shrink-0 border rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft ${
             disabled
               ? "border-light cursor-not-allowed"
               : "border-default-medium hover:cursor-pointer"
@@ -48,7 +48,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
 
         <label
           htmlFor={id}
-          className={`select-none ms-2 text-sm font-medium ${
+          className={`select-none text-lg md:text-lg lg:text-xl font-medium ${
             disabled ? "text-light-gray" : "text-heading"
           }`}
         >
@@ -58,7 +58,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
 
       {helperText && (
         <div
-          className={`text-sm font-medium ${
+          className={`text-sm md:text-base font-medium ${
             error ? "text-red" : "text-gray"
           }`}
         >

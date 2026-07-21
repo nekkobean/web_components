@@ -24,12 +24,12 @@ export const Select: React.FC<SelectProps> = ({
 }) => {
   return (
     <div className="w-full flex flex-col gap-1">
-      <label className="text-sm font-medium text-gray">
+      <label className="text-lg md:text-lg lg:text-xl font-medium text-gray">
         {label} {required && "*"}
       </label>
 
       <select
-        className={`h-10 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs focus:ring-brand focus:border-brand ${
+        className={`h-12 px-4 w-full bg-neutral-secondary-medium border border-default-medium text-heading text-lg md:text-lg lg:text-xl rounded-base shadow-xs focus:ring-brand focus:border-brand ${
           disabled ? "cursor-not-allowed" : "hover:cursor-pointer"
         }`}
         disabled={disabled}
@@ -44,7 +44,7 @@ export const Select: React.FC<SelectProps> = ({
       </select>
 
       {helperText && error && (
-        <div className="text-red text-sm font-normal">{helperText}</div>
+        <div className="text-red text-sm md:text-base font-normal">{helperText}</div>
       )}
     </div>
   );

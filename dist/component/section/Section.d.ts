@@ -5,5 +5,6 @@ export interface SectionProps {
     children?: React.ReactNode;
     style?: string;
     sectionTitleClassName?: string;
+    fullHeight?: boolean;
 }
 export declare const Section: React.FC<SectionProps>;

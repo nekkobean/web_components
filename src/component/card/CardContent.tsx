@@ -2,10 +2,8 @@ import "../../themes/tailwind.css";
 import type { ReactNode } from "react";
 
 export interface CardContentProps {
-
   title: ReactNode;
   description: ReactNode;
-
   titleClassName?: string;
   descriptionClassName?: string;
 }
@@ -17,17 +15,17 @@ export const CardContent: React.FC<CardContentProps> = ({
   descriptionClassName,
 }) => {
   return (
-    <div className="p-10">
+    <div className="p-6">
       <h2
-        className={`text-lg font-bold mb-2 text-black whitespace-pre-line ${
-          titleClassName || ""
+        className={`font-bold mb-2 text-black whitespace-pre-line ${
+          titleClassName || "text-lg"
         }`}
       >
         {title}
       </h2>
       <p
-        className={`text-gray text-sm font-normal whitespace-pre-line ${
-          descriptionClassName || ""
+        className={`text-gray font-normal whitespace-pre-line ${
+          descriptionClassName || "text-sm"
         }`}
       >
         {description}
