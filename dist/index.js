@@ -118,10 +118,10 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 		className: "flex flex-col gap-1",
 		children: e
 	})
-}), _ = ({ children: e, style: n }) => /* @__PURE__ */ t("header", {
+}), _ = ({ children: e, style: n, contentClassName: r }) => /* @__PURE__ */ t("header", {
 	className: `w-full border-b border-light-gray shadow-sm ${n || "bg-white"}`,
 	children: /* @__PURE__ */ t("div", {
-		className: "relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0",
+		className: r || "relative flex items-center justify-between gap-3 px-4 sm:px-9 py-3 sm:py-4 min-w-0",
 		children: e
 	})
 }), v = ({ navDrawer: r = [], style: a, onItemClick: o }) => {
@@ -250,17 +250,17 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
             ${i || "text-black hover:text-green"}`,
 		children: e.label
 	}, e.id))
-}), x = ({ isOpen: r, onClose: i, title: a, children: o }) => r ? /* @__PURE__ */ n(e, { children: [/* @__PURE__ */ t("div", {
+}), x = ({ isOpen: r, onClose: i, title: a, children: o, style: s, bodyClassName: c }) => r ? /* @__PURE__ */ n(e, { children: [/* @__PURE__ */ t("div", {
 	className: "fixed inset-0 z-40 bg-black/40",
 	onClick: i
 }), /* @__PURE__ */ t("div", {
 	className: "fixed inset-0 z-50 flex items-center justify-center p-4",
 	children: /* @__PURE__ */ n("div", {
-		className: "w-full max-w-md bg-white shadow-lg",
+		className: `flex flex-col w-full max-w-md max-h-[85vh] rounded-lg bg-white shadow-lg ${s || ""}`,
 		role: "dialog",
 		"aria-modal": "true",
 		children: [/* @__PURE__ */ n("div", {
-			className: "flex items-center justify-between border-b border-gray-200 px-5 py-4",
+			className: "flex shrink-0 items-center justify-between border-b border-gray-200 px-5 py-4",
 			children: [/* @__PURE__ */ t("h2", {
 				className: "text-lg font-semibold",
 				children: a
@@ -283,7 +283,7 @@ var a = () => /* @__PURE__ */ t("span", { className: "animate-spin rounded-full 
 				})
 			})]
 		}), /* @__PURE__ */ t("div", {
-			className: "p-5",
+			className: `overflow-y-auto p-5 ${c || ""}`,
 			children: o
 		})]
 	})
