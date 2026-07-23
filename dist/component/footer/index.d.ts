@@ -1,0 +1,10 @@
+export { Cfooter } from './Cfooter';
+export type { CfooterProps } from './Cfooter';
+export { FooterBottom } from './FooterBottom';
+export type { FooterBottomProps } from './FooterBottom';
+export { FooterContact } from './FooterContact';
+export type { FooterContactProps } from './FooterContact';
+export { FooterIcon } from './FooterIcon';
+export type { FooterIconProps } from './FooterIcon';
+export { QuickLink } from './QuickLink';
+export type { QuickLinkProps } from './QuickLink';
